@@ -12,7 +12,7 @@ subtitle: nachoi's blog
 email: skchl13@gmail.com
 name: Yena Choi
 description: >
-  Github에 적응하는 중입니다. 어렵네요.
+  아직 Github에 적응하는 중입니다.
 baseurl: ""
 url: "http://nachoi.github.io"
 cover: "/assets/header_171028.jpg"
@@ -35,8 +35,6 @@ jekyll-archives:
     category: '/category/:name/'
     tag: '/tag/:name/'
 
-# Disqus comments
-# disqus_shortname: bencentra
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
@@ -44,10 +42,10 @@ jekyll-archives:
 # Category descriptions (for archive pages)
 descriptions:
   - cat: posts
-    desc: "Posts something routine."
+    desc: "Posts success, failure and conclusion for coding."
 
-  - cat: android-note
-    desc: "Note for studying android."
+  - cat: studynote
+    desc: "Note for studying."
 
 # Social icons and sharing options
 #
@@ -67,7 +65,7 @@ descriptions:
 social:
   - name: Facebook
     icon: facebook
-    username: thebencentra
+    username: Yena Choi
     url:
     desc: Friend me on Facebook
     share: true
