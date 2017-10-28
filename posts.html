@@ -4,6 +4,9 @@ title: "Posts"
 permalink: /posts/
 ---
 
+<p>성실도 - 성공한 것, 실패한 것, 도달한 결론을 기록하는 공간.
+
+
 {% for category in site.categories %}
   {% capture cat %}{{ category | first }}{% endcapture %}
   <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
