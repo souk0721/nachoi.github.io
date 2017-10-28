@@ -8,8 +8,6 @@ permalink: /about/
 
 ### About Nachoi
 
-<br>
-
 최예나 혹은 나최.
 
 문예창작을 전공하였으나 개발 언어에 관심을 더 가지게 됐습니다.
