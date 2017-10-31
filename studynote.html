@@ -4,7 +4,8 @@ title: Study Note
 permalink: /studynote/
 ---
 
-<p>Literally Study Note.</p>
+<p>Literally Study Note.
+<br>허투루 공부하지 않도록 기록하는 곳</p>
 
 
 {% for category in site.categories %}
@@ -16,7 +17,7 @@ permalink: /studynote/
     {% endif %}
   {% endfor %}
   <ul class="posts-list">
-  {% for post in site.categories[cat] %}
+  {% for post in site.categories.studynote %}
     <li>
       <strong>
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -28,7 +29,3 @@ permalink: /studynote/
   {% if forloop.last == false %}<hr>{% endif %}
 {% endfor %}
 <br>
-
-
-
-<!-- 음 ........ -->
