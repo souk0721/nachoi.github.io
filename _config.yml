@@ -37,7 +37,7 @@ jekyll-archives:
 
 
 # Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+ga_tracking_id: "UA-109079446-1"
 
 # Category descriptions (for archive pages)
 descriptions:
