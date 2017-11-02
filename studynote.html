@@ -19,7 +19,7 @@ permalink: /studynote/
     {% endif %}
   {% endfor %}
   <ul class="posts-list">
-  {% for post in site.categories[cat] %}
+  {% for post in site.categories.studynote %}
     <li>
       <strong>
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
