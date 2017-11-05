@@ -14,7 +14,7 @@ UI에 표시하며, onPostExecute로 다 끝낸 후 값을 Return받음
 
 ```java
 public class MyAsyncTask extends AsyncTask<URL, Void, String>
-// 여기서는 중간과정 받는걸 Void를 통해 생략
+  // 여기서는 중간 과정 받는걸 Void를 통해 생략.
   @Override
   protected String doInBackground(URL... urls) {
     URL searchUrl = urls[0];
