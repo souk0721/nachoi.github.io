@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2017-11-05-Android-Uri"
+title:  "Url 만들기 & Uri.Builder"
 date:   2017-11-05
 author: Yena Choi
 categories: studynote

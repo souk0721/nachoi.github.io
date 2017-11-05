@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2017-11-05-Android-AsyncTask"
+title:  "AsyncTask"
 date:   2017-11-05
 author: Yena Choi
 categories: studynote
@@ -26,7 +26,7 @@ public class MyAsyncTask extends AsyncTask<URL, Void, String>
     }
 
     return githubSearchResults;
-}
+  }
   // 네트워크유틸 통해서 url 보낸다음에 반응에 대한 결과값을 String으로 받음.
 
   @Override
@@ -35,6 +35,7 @@ public class MyAsyncTask extends AsyncTask<URL, Void, String>
         mSearchResultsTextView.setText(s);
     }
   }
+}
 ```
 
 
