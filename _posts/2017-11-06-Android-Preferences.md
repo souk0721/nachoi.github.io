@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Intent 인텐트로 값 전달하기"
+title:  "Preferences 환경설정"
 date:   2017-11-06
 author: Yena Choi
 categories: studynote
