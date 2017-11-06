@@ -33,7 +33,7 @@ ShareCompat.IntentBuilder.from(this)
  .startChooser(); //이거 안하면 안됨! 왠지 나중에 까먹을것같다.
 ```
 - intent로 getExtra도 그냥 하는게 아니라,   
-**
-  1) intent가 null인지 먼저 물어보고,   
-  2) intent.hasExtra가 null인지 물어본 후에 getExtra**
+
+  **1) intent가 null인지 먼저 물어보고,**   
+  **2) intent.hasExtra가 null인지 물어본 후에 getExtra**
   - 나는 언젠가 이걸 빼먹고 에러를 낼 것 같다. 그러니까 bold처리
