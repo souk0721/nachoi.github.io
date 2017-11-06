@@ -8,14 +8,14 @@ layout: null
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date: "%Y/%m/%d" }}</pubDate>
-    <lastBuildDate>{{ site.time | date: "%Y/%m/%d" }}</lastBuildDate>
+    <pubDate>{{ site.time | date: "%F" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%F" }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for post in site.posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%Y/%m/%d" }}</pubDate>
+        <pubDate>{{ post.date | date: "%F" }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
         {% for tag in post.tags %}
