@@ -18,14 +18,15 @@ compile 'com.android.support:preference-v7:25:1.0'
 ```
 - 그후 클래스를 만들고 (여기서는 SettingsFragment 라고 하자) `extents PreferenceFragmentCompat` 한다.
 - res -> pref 전용 xml 파일을 만든다.
-```xml
-<CheckBoxPreference
-  android:defaultValue="true"
-  android:key="show_button"
-  android:summaryOff="Hidden"
-  android:summaryOn="Shown"
-  android:title="Show Button" />
-```
+
+  ```xml
+  <CheckBoxPreference
+    android:defaultValue="true"
+    android:key="show_button"
+    android:summaryOff="Hidden"
+    android:summaryOn="Shown"
+    android:title="Show Button" />
+  ```
 
 - 새로 만든 SettingsFragment(라고 하자) 클래스에서 `onCreatePreferences` Override 후,
  `addPreferencesFromResource(R.xml.pref 일_이름)`
