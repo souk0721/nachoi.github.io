@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Date Formatting 날짜 형식 설정"
-date:   2017-11-06
 author: Yena Choi
 categories: studynote
 ---
