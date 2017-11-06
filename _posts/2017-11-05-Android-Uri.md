@@ -15,7 +15,7 @@ categories: studynote
 - URL을 return하는 buildUrl 메소드를 만든다.
 
   *(example)*
-  ```
+  ```java
   public static URL buildUrl(String githubSearchQuery) {
     Uri builtUri =
             Uri.parse(GITHUB_BASE_URL).buildUpon()
@@ -37,7 +37,7 @@ categories: studynote
 
 - 메인액티비티에서 EditText의 문자열을 반영해 URL를 생성하는 메소드 만들기
 
-  ```
+  ```java
   void makeGithubSearchQuery() {
       String githubQuery = mSearchBoxEditText.getText().toString();
       URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
@@ -51,7 +51,7 @@ categories: studynote
 *(example)*   
 https://nachoi.github.io/category/posts?param=study#section 라는 Uri를 만들고 싶을 때.
 
-```
+```java
 Uri.Builder builder = new Uri.Builder()
       .scheme("https")
       .authority("nachoi.github.io")
@@ -66,7 +66,7 @@ Uri.Builder builder = new Uri.Builder()
 
 *(example)*   
 지도에 표시할 geo 정보를 uri로 가져올 경우
-```
+```java
 Intent showMapIntent = new Intent(Intent.ACTION_VIEW);
 showMapIntent.setData(myUri);
 
