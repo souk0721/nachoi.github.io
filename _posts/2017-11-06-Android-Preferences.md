@@ -32,13 +32,14 @@ compile 'com.android.support:preference-v7:25:1.0'
  `addPreferencesFromResource(R.xml.pref 일_이름)`
 - style에 가서 item name을 **"preferenceTheme"**, 본문은 **@style/PreferenceThemeOverlay**
 - 마지막으로 **setting Layout** 을 다 지우고, **root Layout** 을 `fragment`로 변경한다.
-```xml
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/activity_settings"
-android:name="android.example.com.myPreferences.Visuals.SettingsFragment"
-android:layout_width="match_parent"
-android:layout_height="match_parent"/>
-```
+
+  ```xml
+  <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/activity_settings"
+  android:name="android.example.com.myPreferences.Visuals.SettingsFragment"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"/>
+  ```
 
 
 ### Preference - ListPreferences
