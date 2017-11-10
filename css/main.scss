@@ -6,8 +6,8 @@
   font-family: SpoqaHanSans;
   src: local(Spoqa Han Sans Regular),
          local(SpoqaHanSansRegular),
-         url(SpoqaHanSansRegular.eot) format('embedded-opentype'),
-         url(SpoqaHanSansRegular.woff) format('woff');
+         url(/assets/fonts/SpoqaHanSansRegular.eot) format('embedded-opentype'),
+         url(/assets/fonts/SpoqaHanSansRegular.woff) format('woff');
 }
 // Import partials from `sass_dir` (defaults to `_sass`)
 // Includes Bourbon, Neat, and Bitters (thanks, thoughtbot!)
