@@ -202,3 +202,5 @@ public int delete(@NonNull Uri uri, String selection,
     return deleted;
 }
 ```
+
+[참고 - 안드로이드 개발자 홈페이지](https://developer.android.com/training/basics/data-storage/databases.html?hl=ko#DeleteDbRow)
