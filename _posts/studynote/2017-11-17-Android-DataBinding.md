@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Vector 벡터 리소스 사용하기"
+title:  "DataBinding 데이터 바인딩"
 author: Yena Choi
 categories: studynote
 tags: [android, findviewbyid, data-binding]
