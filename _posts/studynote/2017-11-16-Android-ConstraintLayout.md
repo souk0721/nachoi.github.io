@@ -3,7 +3,7 @@ layout: post
 title:  "ConstraintLayout 레이아웃"
 author: Yena Choi
 categories: studynote
-tags: [android, layout, constraintLayout]
+tags: [android, layout, constraintlayout]
 ---
 
 ## ConstraintLayout

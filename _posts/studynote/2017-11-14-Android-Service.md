@@ -3,7 +3,7 @@ layout: post
 title:  "Service 안드로이드 서비스"
 author: Yena Choi
 categories: studynote
-tags: [android, service, pendingIntent]
+tags: [android, service, pendingintent]
 ---
 
 ## Service
