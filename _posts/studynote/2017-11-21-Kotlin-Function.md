@@ -9,7 +9,7 @@ tags: [kotlin, function, if, when, for, while]
 ## Function 함수
 코틀린에서 함수를 정의할 때에는 `fun` 사용.
 반환타입을 지정할 수 있으며, 지정하지 않으면 타입을 추론해서 반환한다.
-```kotlin
+```java
 fun calculate(num1 : Int, num2: Int) : Int {
     // 함수명  파라미터1   파라미터2     반환타입
     return num1 + num2
@@ -20,7 +20,7 @@ calculate(8,3) // Int 11 반환
 
 또한 default 파라미터를 지정할 수도 있다.
 
-```kotlin
+```java
 fun myCoffee(menu: String = "Americano") {
   println(menu)
 }
@@ -37,7 +37,7 @@ myCoffee("Latte") // 파라미터로 입력한 Latte 출력
 
 #### if
 조건이 맞을 경우 실행, 아닐 경우 다음 else 실행.
-```kotlin
+```java
 if (a > b) {
     println(a가 b보다 크다)
 } else {
@@ -47,7 +47,7 @@ if (a > b) {
 <br>
 #### When
 조건에 따라 결과가 달라진다. (다른 언어에서의 `switch` 비슷)
-```kotlin
+```java
 var case = 2
 when (case) {
     1 -> println("조건이 1일때 이거 실행")
@@ -57,7 +57,7 @@ when (case) {
 ```
 
 같은 실행결과를 가질 경우, 콤마 `,`를 통해 조건을 묶을 수 있다.
-```kotlin
+```java
 var case = 2
 when (case) {
     1, 2 -> println("1 혹은 2이다.") // 이 메세지 프린트
@@ -66,7 +66,7 @@ when (case) {
 ```
 
 `in` 혹은 `!in` 을 통하여 숫자 범위를 지정할 수도 있다.
-```kotlin
+```java
 var case = 2
 when (case) {
     in 0..3 -> println("조건 범위 내에 있다") // 이 메세지 프린트
@@ -77,7 +77,7 @@ when (case) {
 
 `is` 로는 값이 특정 유형인지 판단할 수 있다.
 
-```kotlin
+```java
 fun naming(input: Any) = when (input) {
     is String -> println("이름을 $input 님으로 지정합니다.")
     else -> println("문자 형식으로 입력해주세요.")
@@ -92,7 +92,7 @@ naming(100)
 
 루프 안에 있는 것을 반복한다. 다른 언어에서의 for 문과 유사하다.
 
-```kotlin
+```java
 for (num: Int in 0..4) {
     println(num)
     // 0 부터 4까지 총 5줄이 출력된다.
@@ -105,7 +105,7 @@ for (num: Int in 0..4) {
 
 역시 다른 언어에서의 while 문과 유사하다.
 
-```kotlin
+```java
 var num = 0
 while (num < 5) {
     println(num)
@@ -116,7 +116,7 @@ while (num < 5) {
 
 `do..while` 형식으로도 사용 가능하다.
 
-```kotlin
+```java
 var num = 0
 do {
     println(num)
@@ -126,6 +126,5 @@ do {
 
 
 ## 참고
-
-(https://kotlinlang.org/docs/reference/basic-syntax.html)
-(https://kotlinlang.org/docs/reference/control-flow.html)
+[https://kotlinlang.org/docs/reference/basic-syntax.html](https://kotlinlang.org/docs/reference/basic-syntax.html)
+[https://kotlinlang.org/docs/reference/control-flow.html](https://kotlinlang.org/docs/reference/control-flow.html)
