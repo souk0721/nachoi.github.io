@@ -37,7 +37,7 @@ fun downloadData(url: String, completion: ()-> Unit) {
    completion()
 }
 /* completion: ()-> Unit 까지의 람다식이 하나의 파라미터이다.
-  ()->Unit : 파라미터가 없고, Unit 즉 아무것도 반환되지 않는 function */
+  ()->Unit의 의미는 파라미터가 없고, Unit 즉 아무것도 반환되지 않는 function */
 
 downloadData("myUrl.com", {
    println("completion이 완료돼야 이 글이 출력됩니다.")
