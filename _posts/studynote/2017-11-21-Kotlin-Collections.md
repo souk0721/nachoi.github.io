@@ -80,4 +80,4 @@ myArrayList.remove(something) //something을 삭제
   }
   ```
 
-for 에 관한 내용은 [링크](Kotlin-Function.html) 참조.
+for 에 관한 내용은 [Kotlin Funcion 링크](Kotlin-Function.html) 참조.

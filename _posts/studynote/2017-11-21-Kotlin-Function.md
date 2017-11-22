@@ -99,7 +99,7 @@ for (num: Int in 0..4) {
 }
 ```
 
-`arrayList` 나 `hashMap` 등의 값을 출력하는 방법은 [링크](Kotlin-Collections.html) 참조.
+`arrayList` 나 `hashMap` 등의 값을 출력하는 방법은 [Kotlin Collections 링크](Kotlin-Collections.html) 참조.
 <br>
 #### while
 
@@ -125,6 +125,6 @@ do {
 ```
 
 
-## 참고
+### Reference
 [https://kotlinlang.org/docs/reference/basic-syntax.html](https://kotlinlang.org/docs/reference/basic-syntax.html)
 [https://kotlinlang.org/docs/reference/control-flow.html](https://kotlinlang.org/docs/reference/control-flow.html)

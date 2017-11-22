@@ -49,7 +49,6 @@ Cursor cursor = resolver, query(DroidTermsExampleContract.CONTENT_URI,
   }
   ```
 
-[참고](https://classroom.udacity.com/courses/ud851/lessons/88171055-d9e6-4da5-acc4-b92a302a75a8/concepts/4a90b536-c469-4843-914d-5cfdfd400318)
 
 - 참고) UI에서 데이터를 query(읽기) 할 경우
 Resolver를 가져와 query 메소드 호출(Uri 같이 전달) -> Uri의 Authority를 확인하여
@@ -203,4 +202,5 @@ public int delete(@NonNull Uri uri, String selection,
 }
 ```
 
-[참고 - 안드로이드 개발자 홈페이지](https://developer.android.com/training/basics/data-storage/databases.html?hl=ko#DeleteDbRow)
+### Reference
+[안드로이드 개발자 홈페이지](https://developer.android.com/training/basics/data-storage/databases.html?hl=ko#DeleteDbRow)
