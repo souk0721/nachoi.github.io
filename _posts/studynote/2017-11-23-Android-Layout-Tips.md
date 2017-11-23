@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Android Layout Design Tips 레이아웃 꾸미기"
