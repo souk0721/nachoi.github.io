@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title:  "Android Layout Design Tips 레이아웃 꾸미기"
@@ -14,23 +15,24 @@ tags: [android, kotlin, layout]
 - 아이콘을 눌러 View 크기 지정하는 방법을 설정.
 
   1. wrap_content: 내용의 크기를 감싸도록 크기 자동 조정.<br>
-  ![warp_content](/assets/post-img/171123-img1.jpg)
+  <img src="/assets/post-img/171123-img1.jpg" width="245" height="187">
   <br>
 
   2. fixed: 크기의 절대값을 지정.<br>
-  ![fixed](/assets/post-img/171123-img2.jpg)
+  <img src="/assets/post-img/171123-img2.jpg" width="245" height="187">
   <br>
 
   3. match_constraints: 가능한 최대 범위까지 크기 확장.<br>
-  ![match_constraints](/assets/post-img/171123-img3.jpg)
+  <img src="/assets/post-img/171123-img3.jpg" width="245" height="187">
 
     이 설정을 사용할 경우, 좌측 상단에 삼각형이 생긴다. 클릭하면 View 가로와 세로의 비율을 지정할 수 있다.<br>
-     - *ex) ratio 1:1 로 지정할 경우, 가능한 범위 내에서 가로와 세로 길이가 같아진다.*
+       - *ex) ratio 1:1 로 지정할 경우, 가능한 범위 내에서 가로와 세로 길이가 같아진다.*
 <br><br>
 
 ## View 정렬 및 관리하기
 Shift 누르고 여러 View를 선택한 후, 오른쪽 클릭을 하여 정렬하거나 관리할 수 있다.
-![options](/assets/post-img/171123-chain.jpg)
+
+<center><img src="/assets/post-img/171123-chain.jpg" width="50%" height="50%"></center>
 
 - **Organize**: 여러 View의 그룹을 지정할 수 있다.
   - 이 속성을 지정하지 않으면, 실행취소 할 때 하나씩 움직인다.
