@@ -13,7 +13,7 @@ tags: [github, jekyll, markdown, image]
 
 ```markdown
 ![title](http://fakeImgUrl.com/img/01.jpg)
-![title](/img/myComputer.png)ㅆ
+![title](/img/myComputer.png)
 ```
 <br>
 
@@ -71,7 +71,7 @@ tags: [github, jekyll, markdown, image]
 
 css 클래스를 만든 후, 마크다운 파일로 와서 이미지에 적용시킨다.
 ```
-![nachoi](/assets/post-img/171123-nachoi-300.jpg){: .center}
+![title](/img/myImg.png){: width="300" height="300"){: .center}
 ```
 
 
@@ -87,7 +87,7 @@ css 클래스를 만든 후, 마크다운 파일로 와서 이미지에 적용�
 <br><br>
 
 두 번째 방법이 간단했지만, `left` `right` 오른쪽 정렬 등 다른 기능을 이용하려면 직접 css로 custom 하는 것도 좋아보인다.
-
+<br><br>
 
 ### References
 - https://nayunhwan.github.io/dev/2016/12/11/Img-centering/
