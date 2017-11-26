@@ -14,7 +14,9 @@ tags: [github, android, initialize, repository]
 
 3. 확인을 누르면 `https` 혹은 `ssh` 형식의 url을 찾을 수 있다.
 
-  <center>![img](/assets/post-img/171126-up3.JPG){: width="70%" height="70%"}</center>
+  <center>
+  <img src="/assets/post-img/171126-up3.JPG" width="70%" height="70%">
+  </center>
 
   상단에서 https나 ssh 형식을 고르고, 오른쪽 아이콘을 클릭하면 **repository의 url** 을 클립보드에 복사할 수 있다.
 
@@ -22,11 +24,15 @@ tags: [github, android, initialize, repository]
 
 ## Android Project 생성
 1. New Project 를 생성한다. 프로젝트의 위치는 git을 주로 관리할 때 사용하는 폴더로 지정했다. (`C:\git`)
-<center>![img](/assets/post-img/171126-up1.JPG){: width="70%" height="70%"}</center>
+<center>
+<img src="/assets/post-img/171126-up1.JPG" width="70%" height="70%">
+</center>
 <br>
 
 2. 버전 관리를 위해 메뉴 창에서 **VCS - Enable Version Control Intergration** 클릭, Git 선택 한 후 확인한다.
-<center>![img](/assets/post-img/171126-up2.JPG){: width="70%" height="70%"}</center>
+<center>
+<img src="/assets/post-img/171126-up2.JPG" width="70%" height="70%">
+</center>
 
 <br><br>
 
