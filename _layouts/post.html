@@ -8,18 +8,20 @@ layout: default
     <header class="post-header">
       <h1 class="title">{{ page.title }}</h1>
       <p class="info">by <strong>{{ page.author }}</strong></p>
-      <h3 class="comment">
+      {% unless page.cover %} {% include page_divider.html %} {% endunless %}
+      <h3 class="ifsn_title">
         {% if page.categories contains "studynote" %}
-          <br><strong>- Study note -</strong>
-          개발 관련 공부한 내용을 정리한 포스트입니다. 오류 지적이나 제안 환영합니다.
+          <br>Study note
         {% endif %}
       </h3>
+      <p class="ifsn_comment">
+        {% if page.categories contains "studynote" %}
+          개발 관련 공부한 내용을 정리한 포스트입니다. 오류 지적이나 제안 환영합니다.
+        {% endif %}
+      </p>
     </header>
   </div>
 </div>
-
-
-
 
 
 <div class="wrapper">
