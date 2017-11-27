@@ -16,7 +16,7 @@ Function Literal, 즉 함수를 선언하지 않고 곧바로 식으로 전달�
 "변수 생성" - "메소드 생성" - "메소드 실행" 에 해당하는 기능의 요약판.
 
 <br>
-```java
+```Kotlin
 fun sayHello (name: String) {
    println("Hello, $name!")
 }
@@ -24,7 +24,7 @@ sayHello("Nachoi")
 ```
 
 위와 같은 식을 아래처럼 표현 가능하다.
-```java
+```Kotlin
 val sayHello = { name: String -> println("Hello, $name!")}
 sayHello("Nachoi")
 ```
@@ -32,7 +32,7 @@ sayHello("Nachoi")
 ### Lambda Parameter 람다식을 파라미터로 사용하기
 
 람다식 자체를 function의 하나의 파라미터로 사용할 수도 있다.
-```java
+```Kotlin
 fun downloadData(url: String, completion: ()-> Unit) {
    completion()
 }
@@ -48,7 +48,7 @@ downloadData("myUrl.com", {
 
 <br>
 혹은, 람다식이 하나 이상의 파라미터를 가질 수 있다.
-```java
+```Kotlin
 fun downloadWeather (url: String, completion: (String) -> Unit) {
    val weatherData = "Cloudy, -3℃"
    /* url에서 데이터를 가져온 후, 아래의 String 변수 weatherData에 저장 */
@@ -59,13 +59,13 @@ fun downloadWeather (url: String, completion: (String) -> Unit) {
 <br>
 마지막 파라미터가 람다식이면 중괄호 `{ }` 부분을 소괄호 밖으로 뺄 수 있다.  
 그 파라미터가 한 개면, 생략 후 'it'을 사용하여 대체 가능하다.
-```java
+```Kotlin
 downloadWeather("weatherUrl.com") { weatherData ->
    println(weatherData)
 }
 ```
 
-```java
+```Kotlin
 downloadWeather("weatherUrl.com") {
    println(it)
 }

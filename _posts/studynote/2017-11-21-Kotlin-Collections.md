@@ -14,7 +14,7 @@ tags: [kotlin, collections, arraylist, hashmap]
 - immutable - 변경 불가능하다.
 - 변경 불가능한 변수 묶음. 다른 언어의 `Array` 와 유사하다.
 - listOf()의 메소드
-```java
+```Kotlin
 myList.sorted()  //알파벳순 정렬
 myList[n] //n번째 항목 반환
 myList.first() || myList.last() //처음이나 끝 항목 반환
@@ -25,7 +25,7 @@ myList.contains(something)  //something을 포함하는지 확인
 - listOf 와 유사하지만 mutable - 포함된 데이터를 변경 가능하다.
 - **arrayList 를 사용하려고 하면 여러 가지 선택지가 뜬다. 그 중 `(arrayListOf(vararg elements: T)(kotlin.collections))` 항목을 선택하여 import 한다.** (2017/11/21 기준)
 - arrayList()의 메소드
-```java
+```Kotlin
 myArrayList.add() //맨 끝에 항목 추가
 myArrayList.add(n,something) //n번째에 항목 추가
 myArrayList.size() //List의 크기 반환
@@ -40,7 +40,7 @@ myArrayList.remove(something) //something을 삭제
 - **mapOf 를 사용하려고 할 때 여러 선택지가 뜬다. import 할 때 `(varag pairs: pair<K,V>) (kotlin.collections)` 를 선택한다.**
 - mapOf()의 메소드  
 
-  ```java
+  ```Kotlin
   val myMap = mapOf("myNickname" to "Nachoi", "myBlogUrl" to "nachoi.github.io")
 
   println(myMap["myNickname"])    //Nachoi
@@ -53,7 +53,7 @@ myArrayList.remove(something) //something을 삭제
 - `key` to `value` (`키`와 `값`) 을 가지는 형태의 데이터 컬렉션.
 - mapOf 와 유사하지만 mutable - 포함된 데이터를 변경 가능하다.
 - hashMapOf()의 메소드
-  ```java
+  ```Kotlin
   val myHashMap = HashMap<String, Any>()
   myHashMap.put("thisKey", "thisValue")
   myHashMap.put("secondKey", 2)
@@ -68,7 +68,7 @@ myArrayList.remove(something) //something을 삭제
 ## Print Collections by Loops - 반복문으로 컬렉션 출력
 `arrayListOf` 혹은 `hashMapOf` 에 있는 값을 출력하는 방법은 반복문과 함께 `in`을 사용하는것.
 
-  ```java
+  ```Kotlin
   for (something in myArrayList) {  //something은 임의의 변수 이름
     println("값은: $something")
   }

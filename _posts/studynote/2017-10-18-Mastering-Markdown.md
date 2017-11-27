@@ -105,7 +105,7 @@ if (isAwesome){
 - 더욱더 어썸한 건, \`\`\` 옆에 언어를 지정해주면 syntax가 예뻐진다!  
 ```java
 // ```java로 시작
-if (isAwesome){
+if (isAwesome) {
   return true
 }
 // ```로 끝
