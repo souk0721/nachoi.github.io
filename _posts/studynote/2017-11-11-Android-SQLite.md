@@ -1,13 +1,9 @@
 ---
 layout: post
-title:  "SQLite 데이터 저장하기"
+title:  "[Android] SQLite 데이터 저장하기"
 author: Yena Choi
 categories: studynote
 ---
-
-# Android Study
-안드로이드에 관해 공부한 내용을 정리, 나중에 찾아보기 위해 짧게 메모한 내용.
-
 
 ## SQLite
 - 서버가 아닌 응용프로그램에 넣어 사용하는 데이터베이스.

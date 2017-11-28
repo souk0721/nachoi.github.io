@@ -1,14 +1,10 @@
 ---
 layout: post
-title:  "Url 만들기 & Uri.Builder"
+title:  "[Android] Url 만들기 & Uri.Builder"
 date:   2017-11-05
 author: Yena Choi
 categories: studynote
 ---
-
-# Android Study
-안드로이드에 관해 공부한 내용을 정리, 나중에 찾아보기 위해 짧게 메모한 내용.
-
 
 ### URL 만들기
 - NetworkUtils 클래스를 하나 만들어서 원 URL이랑 구분할 파라미터를 String 지정. (어디에서든 메소드를 불러올 수 있게)
@@ -45,7 +41,7 @@ categories: studynote
   }
   ```
 
-##### Uri Builder
+#### Uri Builder
 - Uri.parse는 uri를 가져오는 역할을 한다. 그렇지만 Uri.Builder를 사용하면 여러 요소들을 합쳐 만들 때 실수할 수 있는 부분들을 방지해준다.
 
 *(example)*   

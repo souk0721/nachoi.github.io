@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Github에 안드로이드 프로젝트 올리기"
+title:  "[Github] 안드로이드 프로젝트 올리기"
 author: Yena Choi
 categories: studynote
 tags: [github, android, initialize, repository]

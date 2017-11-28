@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ConstraintLayout 레이아웃"
+title:  "[Android] ConstraintLayout 레이아웃"
 author: Yena Choi
 categories: studynote
 tags: [android, layout, constraintlayout]

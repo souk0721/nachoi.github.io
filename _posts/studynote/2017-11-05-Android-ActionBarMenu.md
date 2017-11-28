@@ -1,14 +1,10 @@
 ---
 layout: post
-title:  "액션바 메뉴 ActionBarMenu"
+title:  "[Android] 액션바 메뉴 ActionBarMenu"
 date:   2017-11-05
 author: Yena Choi
 categories: studynote
 ---
-
-
-# Android Study
-안드로이드에 관해 공부한 내용을 정리, 나중에 찾아보기 위해 짧게 메모한 내용.
 
 ### 액션바 메뉴 (Actionbar Menu)
 - 액션바에 버튼 달려면 메뉴 xml 파일에 `app:ShowAsAction="ifRoom"` 하면되겠다.

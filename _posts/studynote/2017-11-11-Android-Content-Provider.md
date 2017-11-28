@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Content Provider 컨텐트 프로바이더"
+title:  "[Android] Content Provider 컨텐트 프로바이더"
 author: Yena Choi
 categories: studynote
 ---

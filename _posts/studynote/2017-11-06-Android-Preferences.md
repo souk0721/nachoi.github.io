@@ -1,14 +1,10 @@
 ---
 layout: post
-title:  "Preferences 환경설정"
+title:  "[Android] Preferences 환경설정"
 date:   2017-11-06
 author: Yena Choi
 categories: studynote
 ---
-
-# Android Study
-안드로이드에 관해 공부한 내용을 정리, 나중에 찾아보기 위해 짧게 메모한 내용.
-
 
 ### Preferences 환경설정
 - 몰랐던 사실, 세팅 전용 함수랑 xml 테마가 따로 있었다!

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Clicked Item 클릭 처리"
+title:  "[Android] Clicked Item 클릭 처리"
 author: Yena Choi
 categories: studynote
 tags: [android, clicked, design]

@@ -1,20 +1,16 @@
 ---
 layout: post
-title:  "Android Kotlin 액티비티 전환하기"
+title:  "[Android][Kotlin] 액티비티 전환하기"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, intent, activity]
 ---
 
 ## Code에 View 가져오기
-코틀린에서는 더이상 자바처럼 ~~findViewById~~ 할 필요가 없다. 코드에 `view`의 `id`를 적으면 자동완성에 어느 layout의 view를 import 할 것인지 표시된다. 메인 레이아웃에 있는 'nextBtn'라는 id의 버튼 View를 호출해보았다.
+코틀린에서는 더이상 자바처럼 ~~findViewById~~ 할 필요가 없다. 코드에 `view`의 `id`를 적으면 자동완성에 어느 layout의 view를 import 할 것인지 표시된다. 코드에서 메인 레이아웃에 있는 'nextBtn'라는 id의 버튼 View를 호출하면, 상단에 다음과 같이 import 된다.
 
-<center>
-  <img src="/assets/post-img/171127-import1.png" width="90%" height="90%">
-  <img src="/assets/post-img/171127-import2.png" width="90%" height="90%">
+`import kotlinx.android.synthetic.main.activity_main.*`
 
-  상단에 kotlinx.android.synthetic.main.activity_main.* 부분이 import 된 것을 볼 수 있다.
-</center>
 <br>
 
 

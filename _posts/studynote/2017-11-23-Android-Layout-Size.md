@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android Layout Size 레이아웃 크기"
+title:  "[Android] Layout Size 레이아웃 크기"
 author: Yena Choi
 categories: studynote
 tags: [android, layout, size]

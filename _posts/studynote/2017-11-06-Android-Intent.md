@@ -1,13 +1,10 @@
 ---
 layout: post
-title:  "Intent 인텐트로 값 전달하기"
+title:  "[Android] Intent 인텐트로 값 전달하기"
 date:   2017-11-06
 author: Yena Choi
 categories: studynote
 ---
-
-# Android Study
-안드로이드에 관해 공부한 내용을 정리, 나중에 찾아보기 위해 짧게 메모한 내용.
 
 ### Intent 인텐트로 값 전달하기
 - intent에서 putExtra 할때 key의 값을 intent.EXTRA_TEXT 등등 intent에서 꺼내올 수 있다.
@@ -21,7 +18,7 @@ if (intent.resolveActivity(getPackagerManager()) != null) {
 ```
 
 
-##### Intent로 Share하기
+#### Intent로 Share하기
 - 공유할 때는 아래와 같은 폼을 사용한다.
 
 ```java

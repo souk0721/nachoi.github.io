@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DataBinding 데이터 바인딩"
+title:  "[Android] DataBinding 데이터 바인딩"
 author: Yena Choi
 categories: studynote
 tags: [android, findviewbyid, databinding]

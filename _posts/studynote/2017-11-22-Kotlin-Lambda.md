@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Kotlin Lambda 코틀린 람다"
+title:  "[Kotlin] Lambda 코틀린 람다"
 author: Yena Choi
 categories: studynote
 tags: [kotlin, lambda]

@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "AsyncTask"
+title:  "[Android] AsyncTask"
 date:   2017-11-05
 author: Yena Choi
 categories: studynote
 ---
-# Android Study
-안드로이드에 관해 공부한 내용을 정리, 나중에 찾아보기 위해 짧게 메모한 내용.
 
 ### AsyncTask
 : 메인 UI에서 서브 쓰레드로 doInBackground를 보내고, 선택에 따라 결과를 메인

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Github 이미지 사이즈 조절 & 정렬"
+title:  "[Github] 이미지 사이즈 조절 & 정렬"
 author: Yena Choi
 categories: studynote
 tags: [github, jekyll, markdown, image]
