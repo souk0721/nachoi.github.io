@@ -87,13 +87,13 @@ Parcelable은 클래스에 있는 데이터 형식을 바꿔서 activity -> acti
 ```
 
 뭔가 아주 많이 생겼지만, 여기서 따로 건드릴 것은 없다. 그리고 이제 `Parcelable` 자료형의 데이터를 putExtra 할 수 있다!
-
+<br>
 
 ```kotlin
 /* firstActivity에서 */
 
 var myExam = Exam("nachoi", 90, "A")
-/* name, score, grade 데이터를 가지는 Exam 클래스 생성*/
+/* name, score, grade 데이터를 가지는 Exam 변수 생성*/
 
 nextBtn.setOnClickListener{
     val nextIntent = Intent(this, secondActivity::class.java)
