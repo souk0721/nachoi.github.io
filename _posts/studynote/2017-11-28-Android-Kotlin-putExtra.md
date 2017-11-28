@@ -114,3 +114,7 @@ if (intent.hasExtra("examKey")) {
     println("${exam.name}의 시험 점수는 ${exam.score}점이므로 ${exam.grade}등급이다.")
 }
 ```
+<br><br>
+
+### References
+- https://developer.android.com/reference/android/os/Parcelable.html
