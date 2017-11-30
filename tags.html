@@ -13,7 +13,7 @@ permalink: /tags/
 
   <div class="tags-section">
     {% for tag in site.tags %}
-    <h3 id="{{ tag[0] | capitalize }}">{{ tag[0] }}</h3>
+    <h3 id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize}}</h3>
     <ul class="tags-posts">
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
