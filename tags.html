@@ -9,21 +9,21 @@ permalink: /tags/
     <a href="#{{ tag[0] | slugify }}" class="post-tag"> {{ tag[0] }}</a>
     {% endfor %}
   </div>
-
   <hr/> -->
+
   <div class="tags-section">
-    {% assign sorted_tags = site.tags | sort "}
-    {% for tag in sorted_tags %}
-    <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
+    {% for tag in site.tags %}
+    <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
     <ul class="tags-posts">
-      {% for post in tag %}
+      {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
       <li>
         {{ post.title }}
+        </a>
       <span class="post-date"> - {{ post.date | date: "%F" }}</span>
       </li>
-      </a>
       {% endfor %}
+      <br>
     </ul>
     {% endfor %}
   </div>
