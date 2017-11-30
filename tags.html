@@ -5,7 +5,7 @@ title: Tags
 <div class="tags">
   <div class="tags-list">
     {% for tag in site.tags %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }} </a>
     {% endfor %}
   </div>
   <hr/>
@@ -17,7 +17,7 @@ title: Tags
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
       <li>
         {{ post.title }}
-      <small class="post-date">{{ post.date | date_to_string }}</small>
+      <small class="post-date">{{ post.date | date: "%F" }}</small>
       </li>
       </a>
       {% endfor %}
