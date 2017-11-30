@@ -12,10 +12,11 @@ permalink: /tags/
 
   <hr/> -->
   <div class="tags-section">
-    {% for tag in site.tags %}
-    <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+    {% assign sorted_tags = site.tags | sort "}
+    {% for tag in sorted_tags %}
+    <h3 id="{{ tag | slugify }}">{{ tag }}</h3>
     <ul class="tags-posts">
-      {% for post in tag[1] %}
+      {% for post in tag %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
       <li>
         {{ post.title }}
