@@ -3,7 +3,7 @@ layout: post
 title:  "[Github] 안드로이드 프로젝트 올리기"
 author: Yena Choi
 categories: studynote
-tags: [github, android, initialize, repository]
+tags: [github, android, repository]
 ---
 안드로이드 새 프로젝트를 만들고 Github의 새 repository 에서 버전 관리를 하고 싶은데, 막상 하려니 헷갈린다. 깃허브에 저장소를 추가하고, 새 안드로이드 프로젝트 파일을 올리는 방법을 공부할 겸 정리해보았다.
 

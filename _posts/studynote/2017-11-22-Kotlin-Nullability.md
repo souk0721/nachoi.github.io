@@ -3,7 +3,7 @@ layout: post
 title:  "[Kotlin] Nullability 코틀린에서의 null"
 author: Yena Choi
 categories: studynote
-tags: [kotlin, nullability, null]
+tags: [kotlin, null]
 ---
 
 ## Nullability

@@ -3,7 +3,7 @@ layout: post
 title:  "[Android][Kotlin] PutExtra 데이터 전달"
 author: Yena Choi
 categories: studynote
-tags: [android, kotlin, intent, putextra]
+tags: [android, kotlin, intent]
 ---
 
 ## PutExtra & GetExtra

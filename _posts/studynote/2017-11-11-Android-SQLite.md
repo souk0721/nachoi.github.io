@@ -3,6 +3,7 @@ layout: post
 title:  "[Android] SQLite 데이터 저장하기"
 author: Yena Choi
 categories: studynote
+tags: [android]
 ---
 
 ## SQLite

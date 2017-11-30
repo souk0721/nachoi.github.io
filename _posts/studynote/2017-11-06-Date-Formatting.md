@@ -3,6 +3,7 @@ layout: post
 title:  "[Github] Date Formatting 날짜 형식 설정"
 author: Yena Choi
 categories: studynote
+tags: [github, jekyll]
 ---
 
 ## Date Formatting in Github Jekyll - 깃허브 지킬 날짜 형식 설정

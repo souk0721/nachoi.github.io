@@ -3,7 +3,7 @@ layout: post
 title:  "[Kotlin] Collections 코틀린 컬렉션"
 author: Yena Choi
 categories: studynote
-tags: [kotlin, collections, arraylist, hashmap]
+tags: [kotlin]
 ---
 
 ## Collections

@@ -3,7 +3,7 @@ layout: post
 title:  "[Android][Kotlin] 생명주기의 Instance State"
 author: Yena Choi
 categories: studynote
-tags: [android, kotlin, lifecycle, instancestate]
+tags: [android, kotlin, lifecycle]
 ---
 
 App에 데이터를 입력하다가 전화를 받는 등, 다른 작업을 하고 나서 입력한 데이터가 사라질 위험이 있다. 이를 방지하기 위해 액티비티가 재생성될 때에 Instance State에 임시로 데이터를 저장할 수 있다.

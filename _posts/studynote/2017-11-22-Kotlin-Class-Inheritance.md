@@ -3,7 +3,7 @@ layout: post
 title:  "[Kotlin] Class & Inheritance 코틀린 클래스와 상속"
 author: Yena Choi
 categories: studynote
-tags: [kotlin, class, inheritance]
+tags: [kotlin]
 ---
 
 ## Class

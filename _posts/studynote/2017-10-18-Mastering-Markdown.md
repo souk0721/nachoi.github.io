@@ -4,6 +4,7 @@ title:  "[Github] 마크다운 파일 작성법"
 date:   2017-10-18
 author: Yena Choi
 categories: studynote
+tags: [github, markdown]
 ---
 
 

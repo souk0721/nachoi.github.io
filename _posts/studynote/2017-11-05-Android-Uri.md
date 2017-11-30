@@ -4,6 +4,7 @@ title:  "[Android] Url 만들기 & Uri.Builder"
 date:   2017-11-05
 author: Yena Choi
 categories: studynote
+tags: [android]
 ---
 
 ### URL 만들기

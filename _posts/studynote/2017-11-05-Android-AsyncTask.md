@@ -4,6 +4,7 @@ title:  "[Android] AsyncTask"
 date:   2017-11-05
 author: Yena Choi
 categories: studynote
+tags: [android]
 ---
 
 ### AsyncTask

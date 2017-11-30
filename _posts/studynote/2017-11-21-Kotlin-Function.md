@@ -3,7 +3,7 @@ layout: post
 title:  "[Kotlin] Function 코틀린 함수"
 author: Yena Choi
 categories: studynote
-tags: [kotlin, function, if, when, for, while]
+tags: [kotlin, function]
 ---
 
 ## Function 함수
