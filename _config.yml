@@ -33,7 +33,7 @@ jekyll-archives:
   layout: 'archive'
   permalinks:
     category: '/:name/'
-    tag: '/tag/:name/'
+    tag: '/tags/:name/'
 
 
 # Google analytics
