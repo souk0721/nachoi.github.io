@@ -84,3 +84,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+
+## ListView 의 단점
+ListView는 Adapter를 통해 `getView` 메소드를 호출하여 View를 만든다. 최초로 화면을 로딩한 후에도 스크롤을 움직이는 등 액션을 취하면 그 때마다 getView를 호출하여 리소스를 많이 사용하고 속도가 느려진다. 그 이유 때문에, ListView보다 `ViewHolder`를 이용한 `RecyclerView`를 사용하는 것이 권장된다.  
