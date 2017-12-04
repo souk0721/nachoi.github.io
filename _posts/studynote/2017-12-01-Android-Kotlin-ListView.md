@@ -19,7 +19,7 @@ ListView가 안드로이드 공부 하면서 특히 어려운 부분인 것 같�
 위와 같이 순서를 정하고, 리스트뷰 레이아웃 예제는 간단한 채팅 리스트 화면으로 만들었다. ~~썰렁한 UI는 무시하자~~
 
 <center>
-<img src="/assets/post-img/171204-capture1.JPG" width="30%" height="30%">
+<img src="/assets/post-img/171204-capture1.JPG" width="40%" height="40%">
 </center>
 
 
@@ -30,6 +30,7 @@ ListView가 안드로이드 공부 하면서 특히 어려운 부분인 것 같�
 /* Chat.kt */
 
 class Chat(val name: String, val message: String, val photo: String)
+/* photo 파라미터는 우선 String으로 선언하고, 이후에 코드를 통해 cardimg1.png와 같은 실제 이미지와 데이터 연동을 했다. */
 ```
 
 그리고, name-message-photo 형식을 띤 Chat 데이터를 여러개 가지고 있는 ArrayList가 필요했다. DataService 라는 `Object` 파일에 `ArrayList<Chat>` 변수 chatData 를 초기화했다.
@@ -56,13 +57,14 @@ object DataService {
 메인 액티비티에서 작업했기 때문에 activity_main.xml에서 Palette - Containers - ListView 를 배치하고, id를 myListView로 지정했다.
 
 <center>
-<img src="/assets/post-img/171204-capture2.JPG" width="70%" height="70%">
+<img src="/assets/post-img/171204-capture2.JPG" width="90%" height="90%">
 </center>
 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-  <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  <android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
@@ -99,13 +101,14 @@ object DataService {
 다음으로 ListView 안에 들어가는 `item`을 만들었다. 이 예제의 경우, chat_list_item.xml 파일을 만들어서 왼쪽에 사진, 상단에 이름, 하단에 메세지가 오도록 커스텀했다.
 
 <center>
-<img src="/assets/post-img/171204-capture3.JPG" width="70%" height="70%">
+<img src="/assets/post-img/171204-capture3.JPG" width="90%" height="90%">
 </center>
 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
@@ -217,6 +220,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
+<br><br>
 
 ### ListView 의 단점
 ListView는 Adapter를 통해 `getView` 메소드를 호출하여 View를 만든다. 최초로 화면을 로딩한 후에도 스크롤을 움직이는 등 액션을 취하면 그 때마다 `findViewById`를 통해 convertView에 들어갈 요소를 찾는다. 스크롤 할 때마다 View를 찾으면 리소스를 많이 사용하게 되고, 속도가 느려진다. 그 이유 때문에, `ViewHolder`와 `RecyclerView`를 사용하는 것이 권장된다.  
