@@ -12,6 +12,7 @@ tags: [android, kotlin, view]
 `RecyclerView`는 ListView의 단점을 보완하기 위해 만들어졌다. `ViewHolder`를 필수적으로 사용해야 하고 `LayoutManager`를 설정하는 등 조금 더 복잡할 수 있지만, 앱에서 불필요하게 메모리를 사용하는 일은 줄어들 것이다.
 
 안드로이드 리사이클러뷰를 사용하기 위해 준비해야 할 것을 정리해보았다. (이전의 [ListView 포스트](/studynote/2017/12/01/Android-Kotlin-ListView.html)에서 정리했던 것과 유사하다.)
+
 1. RecyclerView에서 사용할 데이터 정리 (클래스 정의 & 데이터 파일 생성)
 2. Gradle에서 RecyclerView 컴파일 추가
 3. RecyclerView를 사용할 레이아웃의 xml 파일에 RecyclerView 추가
@@ -20,9 +21,11 @@ tags: [android, kotlin, view]
 6. LayoutManager 설정
 
 이 예제는 다음과 같은 Chat App의 화면을 만드는 것을 목표로 했다.
+
 <center>
 <img src="/assets/post-img/171206-capture1.JPG" width="40%" height="40%">
 </center>
+<br>
 
 ### 1. RecyclerView에서 사용할 데이터 정리
 Chat 이라는 `Class` 파일을 만들어서 Chat의 구성요소를 name, message, photo로 설정한다.
@@ -31,10 +34,11 @@ Chat 이라는 `Class` 파일을 만들어서 Chat의 구성요소를 name, mess
 /* Chat.kt */
 
 class Chat(val name: String, val message: String, val photo: String)
-/* photo 파라미터는 우선 String으로 선언하고, 이후에 코드를 통해 실제 이미지 파일과 데이터 연동을 한다. */
+/* photo 파라미터는 우선 String으로 선언하고, 이후에 코드를 통해 실제 이미지 파일과 데이터를 연동했다. */
 ```
+<br>
 
-그리고, 데이터를 하드코딩 하기 때문에 name-message-photo 형식을 띤 Chat 데이터를 여러개 가지고 있는 ArrayList 를 만든다. DataService 라는 `Object` 파일에 `ArrayList<Chat>` 변수 chatData 생성한다.
+그리고, 데이터를 하드코딩 하기 때문에 name-message-photo 형식을 띤 Chat 데이터를 여러개 가지고 있는 ArrayList 가 필요하다. DataService 라는 `Object` 파일에 `ArrayList<Chat>` 변수 chatData 생성한다.
 
 ```Kotlin
 /* DataService.kt */
@@ -52,11 +56,11 @@ object DataService {
     )
 }
 ```
-drawable 폴더에는 cardimg1.png 등 photo에 사용할 이미지 파일을 추가했다.
+클래스를 만든 후, drawable 폴더에는 cardimg1.png 등 photo에 사용할 이미지 파일을 추가했다.
 <br>
 
 ### 2. Gradle에서 RecyclerView 컴파일 추가
-RecyclerView는 기본 API에 제공되어 있지 않기 때문에, Support Library 추가를 해야 사용할 수 있다. `Gradle Scrpits` - `build.gradle (Module: app)`의 하단 `dependencies` 안에 컴파일을 추가해야 한다.
+RecyclerView는 기본 API에 제공되어 있지 않기 때문에, Support Library 추가를 해야 사용할 수 있다. 좌측의 `Gradle Scrpits` - `build.gradle (Module: app)`경로로 파일을 열어서 `dependencies` 안에 컴파일을 추가해야 한다.
 
 ```
 compile 'com.android.support:recyclerview-v7:26.1.0'
@@ -69,6 +73,8 @@ gradle 파일을 수정하고 나면 우측 상단의 **Sync Now** 를 눌러서
 
 ### 3. RecyclerView를 사용할 레이아웃의 xml 파일에 RecyclerView 추가
 Gradle에 제대로 추가했다면, `<android.support.v7.widget.RecyclerView>` 경로를 통해 RecyclerView를 레이아웃에 추가할 수 있다. 레이아웃 미리보기에서는 RecyclerView 안에 Item 0, Item 1 과 같은 텍스트 리스트가 수직으로 나열된다.
+
+여기서는 activity_main.xml 에 RecyclerView를 추가했다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -151,13 +157,15 @@ Gradle에 제대로 추가했다면, `<android.support.v7.widget.RecyclerView>` 
       tools:text="This is contents of chat." />
 </android.support.constraint.ConstraintLayout>
 ```
-채팅창 하나의 높이는 ConstraintLayout의 height 영역에서 72dp로 설정했다. 그리고 각 View에 id를 부여하고, ImageView의 내용은 우선 안드로이드 기본 제공 이미지를 사용했다.
+채팅창 하나의 높이는 ConstraintLayout의 height 영역에서 72dp로 설정했다. 그리고 각 View에 id를 부여하고, ImageView의 기본값으로는 안드로이드 기본 제공 이미지를 사용했다.
 <br>
 
 ### 5. Adapter 만들고, 어댑터 설정
 RecyclerView와 그곳에 들어갈 각각의 item, 연동할 데이터까지 설정했으면 `Adapter`를 만들어야 한다. 사진, 이름, 채팅 내용 등 어느 요소를 어느 View에 넣을 것인지 연결해주는 것이 Adpater의 역할이다. 리사이클러뷰의 어댑터는 기본 ~~BaseAdapter()~~가 아닌, RecyclerView.Adapter 를 extend 한다.
 
 ```Kotlin
+/* ChatRecyclerAdapter.kt */
+
 class ChatRecyclerAdapter(val context: Context, val chatData: ArrayList<Chat>) : RecyclerView.Adapter<ChatRecyclerAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): Holder {
@@ -200,6 +208,7 @@ Adapter를 만들었으면, RecyclerView를 불러올 액티비티로 돌아가�
 
 ```kotlin
 /* MainActivity.kt */
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -246,7 +255,7 @@ class MainActivity : AppCompatActivity() {
 ```
 <br>
 
-recyclerView에 `setHasFixedSize` 옵션에 true 값을 준다. 그 이유는 item이 추가되거나 삭제될 때 RecyclerView의 크기가 변경될 수도 있고, 그렇게 되면 계층 구조의 다른 View 크기가 변경될 가능성이 있기 때문이다. 특히 item이 자주 추가/삭제되면 오류가 날 수도 있기에 setHasFixedSize true를 설정한다.
+마지막으로 recyclerView에 `setHasFixedSize` 옵션에 true 값을 준다. 그 이유는 item이 추가되거나 삭제될 때 RecyclerView의 크기가 변경될 수도 있고, 그렇게 되면 계층 구조의 다른 View 크기가 변경될 가능성이 있기 때문이다. 특히 item이 자주 추가/삭제되면 오류가 날 수도 있기에 setHasFixedSize true를 설정한다.
 <br><br>
 
 ### References
