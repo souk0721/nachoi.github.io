@@ -7,12 +7,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Nachoi
-subtitle: 개발과 깃헙을 기웃거리는 초보자 나최의 블로그
-email: skchl13@gmail.com
+title: Nachoi Blog
+subtitle: 안드로이드 개발과 깃헙을 기웃거리는 나최의 블로그
+email: 4nachoi@gmail.com
 name: Yena Choi
 description: >
-  아직 Github에 적응하는 중입니다.
+  Woman who writes code majored in Creative Writing!
 baseurl: ""
 url: "http://nachoi.github.io"
 cover: "/assets/header_171028.jpg"
@@ -43,10 +43,11 @@ google_analytics: "UA-109079446-1"
 # Category descriptions (for archive pages)
 descriptions:
   - cat: posts
-    desc: "Posts success, failure and conclusion for coding."
+    desc: "성실도 - 성공한 것, 실패한 것, 도달한 결론을 기록하는 공간"
 
   - cat: studynote
-    desc: "Note for studying."
+    desc: "허투루 공부하지 않도록 기록하는 곳.
+오류 지적이나 제안 환영합니다."
 
 # Social icons and sharing options
 #
