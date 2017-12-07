@@ -154,7 +154,7 @@ object DataService {
 ### 4. Adapter 만들고 설정하기.
 ListView, ListView의 각 item, 그리고 거기에 넣을 데이터까지 설정했으면 `Adapter`를 만들어야 한다. 사진, 이름, 채팅 내용 등 어느 요소를 어느 View에 넣을 것인지 연결해주는 것이 Adpater의 역할이다.
 
-임의로 Custom한 Adpater Class는 `BaseAdapter()`의 확장(extend)이다. 그렇기에 기본적으로 4개의 메소드를 implement 해야한다. 아래와 같이 입력한 후에, 클래스 이름(ChatAdpater)에 커서를 놓고 Alt+Enter를 누르면 자동으로 필수 메소드를 Implement를 할 수 있다.
+임의로 Custom한 Adpater Class는 `BaseAdapter()`을 상속(extend)받는다. 그렇기에 기본적으로 4개의 메소드를 implement 해야한다. 아래와 같이 입력한 후에, 클래스 이름(ChatAdpater)에 커서를 놓고 Alt+Enter를 누르면 자동으로 필수 메소드를 Implement를 할 수 있다.
 
 ```Kotlin
 class ChatAdapter (val context: Context, val chatData: ArrayList<Chat>) : BaseAdapter()
