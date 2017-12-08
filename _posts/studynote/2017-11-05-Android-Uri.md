@@ -35,7 +35,7 @@ tags: [android]
 - 메인액티비티에서 EditText의 문자열을 반영해 URL를 생성하는 메소드 만들기
 
   ```java
-  void makeGithubSearchQuery() {
+  void makeGitHubSearchQuery() {
       String githubQuery = mSearchBoxEditText.getText().toString();
       URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
       mUrlDisplayTextView.setText(githubSearchUrl.toString());

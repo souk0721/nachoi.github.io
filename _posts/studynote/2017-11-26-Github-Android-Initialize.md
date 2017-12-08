@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "[Github] 안드로이드 프로젝트 올리기"
+title:  "[GitHub] 안드로이드 프로젝트 올리기"
 author: Yena Choi
 categories: studynote
 tags: [github, android, repository]
 ---
-안드로이드 새 프로젝트를 만들고 Github의 새 repository 에서 버전 관리를 하고 싶은데, 막상 하려니 헷갈린다. 깃허브에 저장소를 추가하고, 새 안드로이드 프로젝트 파일을 올리는 방법을 공부할 겸 정리해보았다.
+안드로이드 새 프로젝트를 만들고 GitHub의 새 repository 에서 버전 관리를 하고 싶은데, 막상 하려니 헷갈린다. 깃허브에 저장소를 추가하고, 새 안드로이드 프로젝트 파일을 올리는 방법을 공부할 겸 정리해보았다.
 
-## Github repository 생성
+## GitHub repository 생성
 1. `https://github.com/<user_id>`에서 Repository 탭으로 이동한다.
 
 2. New를 클릭하여 새로운 저장소를 만든다.

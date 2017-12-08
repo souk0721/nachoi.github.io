@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Github] 마크다운 파일 작성법"
+title:  "[GitHub] 마크다운 파일 작성법"
 date:   2017-10-18
 author: Yena Choi
 categories: studynote
@@ -12,7 +12,7 @@ tags: [github, markdown]
 
   - 깃헙에 제대로 글 올리기도 전에 난관에 부딪혔다. 할줄 아는건 # 뿐.
   - 마크다운 파일 작성이 아직 어색해 가이드를 가져와 연습하기로 한다.
-[원문: Github에서 제공하는 Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+[원문: GitHub에서 제공하는 Markdown Guide](https://guides.github.com/features/mastering-markdown/)
 
 
 ### 볼드체, 이탤릭체, 취소선
@@ -35,7 +35,7 @@ https://guides.github.com/features/mastering-markdown/
 링크 앞에 설명을 붙이고 싶으면 아래와 같은 포멧을 사용한다.  
 `[링크 설명](https://www.URLwhatever.com)`
 
-[원문: Github에서 제공하는 Markdown Guide](https://guides.github.com/features/mastering-markdown/)
+[원문: GitHub에서 제공하는 Markdown Guide](https://guides.github.com/features/mastering-markdown/)
 
 ### 숫자/기호로 List 작성
 

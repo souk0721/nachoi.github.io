@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "[Github] Date Formatting 날짜 형식 설정"
+title:  "[GitHub] Date Formatting 날짜 형식 설정"
 author: Yena Choi
 categories: studynote
 tags: [github, jekyll]
 ---
 
-## Date Formatting in Github Jekyll - 깃허브 지킬 날짜 형식 설정
+## Date Formatting in GitHub Jekyll - 깃허브 지킬 날짜 형식 설정
 
 - 블로그를 통해 작성한 글이 **06 Nov 2017** 와 같은 형식으로 업로드되는 것을 참을 수 없어서 **YYYY-MM-DD** 형식으로 바꾸고 싶어졌다. ~~역시 나는 한국인~~
 - 구글에 이것저것 검색해보다 'jekyll post date format' 으로 찾아보니 좋은 사이트 페이지가 있어서 번역해서 정리해놓기로 한다.
