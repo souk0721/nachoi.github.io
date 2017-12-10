@@ -15,7 +15,7 @@ tags: [android, view]
 이럴 때에는 이미지뷰를 클릭하고 `attributes` 창 왼쪽에서 **ratio 1:1** 설정과 **match_constraint** 설정을 해주어야 한다.
 
 <center>
-<img src="/assets/post-img/171209-01.JPG" width="90%" height="90%">
+<img src="/assets/post-img/171209-01.JPG" width="100%" height="100%">
 </center>
 <br>
 
@@ -68,4 +68,37 @@ tags: [android, view]
 
 </android.support.constraint.ConstraintLayout>
 ```
+<br>
+
+## GridView item 개수 설정하기
+GridView에서 한 줄에 몇개의 Grid item이 들어갈지 설정하려면 `LayoutManager`를 생성할 때 `GridLayoutManager`로 만든다. GridLayoutManager는 Context와 spanCount를 파라미터로 사용하며, 이 spanCount에 Int를 입력해주면 한 줄에 최대 몇 개의 grid item이 들어가는지 설정할 수 있다.
+
+```Kotlin
+/* MainActivity.kt */
+/* onCreate 에서 LayoutManager 설정 */
+
+val myLayoutManager = GridLayoutManager(this, 3)
+myRecyclerView.layoutManager = myLayoutManager
+
+```
+<br>
+
+context로 this를 넘기고, Int로 3을 입력하여 한줄에 최대 3개의 그리드가 들어가게 설정했다.
+
+<center>
+<img src="/assets/post-img/171210-01.JPG" width="40%" height="40%">
+</center>
+<br>
+
+위에서 본 것과 같이, item의 최상위 레이아웃인 ConstraintLayout의 width와 height를 각각 match_parent와 wrap_content로 설정했었다. 그리고 ImageView의 비율을 1:1로 고정해두었기 때문에 spanCount가 달라져도 이미지는 1:1 비율을 유지한다.
+
+```Kotlin
+val myLayoutManager = GridLayoutManager(this, 2)
+myRecyclerView.layoutManager = myLayoutManager
+```
+<br>
+
+<center>
+<img src="/assets/post-img/171210-02.JPG" width="40%" height="40%">
+</center>
 <br>
