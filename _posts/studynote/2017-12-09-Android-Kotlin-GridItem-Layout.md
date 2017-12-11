@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "[Android] Grid item 그리드 아이템 만들기"
+title:  "[Android][Kotlin] Grid item 그리드 아이템 만들기"
 author: Yena Choi
 categories: studynote
-tags: [android, view]
+tags: [android, kotlin, view]
 ---
 
 
