@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "[Android] GridView 그리드뷰 아이템 만들기"
+title:  "[Android] Grid item 그리드 아이템 만들기"
 author: Yena Choi
 categories: studynote
 tags: [android, view]
 ---
 
 
-## GridView item
-그리드뷰를 사용하려면 우선 뷰를 채울 `item`을 새 레이아웃 파일로 만든다.
+## Grid item
+`GridView`나 `RecyclerView`의 그리드 레이아웃을 사용하려면 우선 뷰를 채울 `item`을 새 레이아웃 파일로 만든다.
 
 이미지를 정사각형으로 유지하려면 width와 height 값이 같아야 한다. 하지만 dp로 길이 값을 입력하면 화면 크기가 달라져도 이미지 크기가 고정이 되어서 예쁘게 배열되지 않는다.
 
@@ -70,18 +70,35 @@ tags: [android, view]
 ```
 <br>
 
-## GridView item 개수 설정하기
-GridView에서 한 줄에 몇개의 Grid item이 들어갈지 설정하려면 `LayoutManager`를 생성할 때 `GridLayoutManager`로 만든다. GridLayoutManager는 Context와 spanCount를 파라미터로 사용하며, 이 spanCount에 Int를 입력해주면 한 줄에 최대 몇 개의 grid item이 들어가는지 설정할 수 있다.
+## Grid item 개수 설정하기
 
-```Kotlin
-/* MainActivity.kt */
-/* onCreate 에서 LayoutManager 설정 */
+- GridView : GridView를 포함하고 있는 Layout의 xml파일에 `android:numColumns="Int"` 옵션을 추가한다.
 
-val myLayoutManager = GridLayoutManager(this, 2)
-myRecyclerView.layoutManager = myLayoutManager
+    ```xml
+    <!-- activity_main.xml -->
+    <GridView
+        android:id="@+id/myGridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        ...
+        app:layout_constraintTop_toBottomOf="@+id/MainTitle"
+        android:numColumns="2"/>
+    ```
+    <br>
 
-```
-<br>
+- RecyclerView : RecyclerView에서 한 줄에 몇개의 Grid item이 들어갈지 설정하려면 LayoutManager를 생성할 때 `GridLayoutManager`로 만든다. GridLayoutManager는 Context와 spanCount를 파라미터로 사용하며, 이 `spanCount에` Int를 입력해주면 한 줄에 최대 몇 개의 grid item이 들어가는지 설정할 수 있다.
+
+    ```Kotlin
+    /* MainActivity.kt */
+    /* onCreate 에서 LayoutManager 설정 */
+
+    val myLayoutManager = GridLayoutManager(this, 2)
+    myRecyclerView.layoutManager = myLayoutManager
+
+    ```
+    <br>
 
 context로 this를 넘기고, Int로 2를 입력하여 한줄에 최대 2개의 그리드가 들어가게 설정했다.
 
@@ -106,8 +123,8 @@ myRecyclerView.layoutManager = myLayoutManager
 </center>
 <br>
 
-### 가로모드/세로모드 Grid 개수 설정하기
-spanCount를 가로/세로 별로 따로 지정해두면 화면이 회전할 때 더 나은 레이아웃을 표현할 수 있다.
+### 화면 방향에 따른 Grid 개수 설정하기
+RecyclerView의 GridLayoutManager를 지정할 때, spanCount를 가로/세로 별로 따로 지정해두면 화면이 회전할 때 더 나은 레이아웃을 표현할 수 있다.
 
 현재 화면의 상태는 `resources.configuration.orientation`으로 확인할 수 있으며, orientation의 값은 `Configuration.ORIENTATION_LANDSCAPE`나 `Configuration.ORIENTATION_PORTRAIT`을 불러와 사용할 수 있다.
 
@@ -121,6 +138,7 @@ if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) 
 val myLayoutManager = GridLayoutManager(this, spanCount)
 myRecyclerView.layoutManager = myLayoutManager
 ```
+
 <center>
 <img src="/assets/post-img/171210-03.JPG" width="60%" height="60%">
 </center>
