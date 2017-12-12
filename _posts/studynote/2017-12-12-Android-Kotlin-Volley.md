@@ -166,7 +166,9 @@ class MainActivity : AppCompatActivity() {
 
 
 <center>
-<img src="/assets/post-img/171213-full.JPG" width="100%" height="100%">
+  <a href="/assets/post-img/171213-full.JPG"
+    <img src="/assets/post-img/171213-full.JPG" width="100%" height="100%">
+  </a>
 </center>
 <br>
 
