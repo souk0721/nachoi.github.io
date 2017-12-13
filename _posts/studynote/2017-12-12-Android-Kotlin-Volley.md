@@ -76,7 +76,7 @@ Btn.setOnClickListener {
         if (testSuccess) {
             Toast.makeText(this, "통신 성공!", Toast.LENGTH_LONG).show()
         } else {
-            Toast.makeText(this, "테스트 실패...!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "통신 실패...!", Toast.LENGTH_LONG).show()
         }
     }
 }
@@ -162,8 +162,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 <br>
-서버와 연결할 수 없거나, 디바이스의 데이터/Wifi가 꺼져 있는 등 통신에 실패하면 에러가 날 것이다. 성공하면 String 형식으로 아래 캡처와 같이 Response를 받아온다. (Logcat)
-
+request를 만들 때 'success' Boolean이 true일 경우, 받아온 response를 `println` 하도록 설정해두었다. 통신에 성공했으므로, String 형식으로 받아온 response를 Logcat에 출력한다.
 
 <center>
   <a href="../../../../assets/post-img/171213-full.JPG" target="_blank">
@@ -171,6 +170,9 @@ class MainActivity : AppCompatActivity() {
   </a>
 </center>
 <br>
+
+서버와 연결할 수 없거나, 디바이스의 데이터/Wifi가 꺼져 있는 등 통신에 실패하면 에러가 날 것이다.
+<br><br>
 
 ### References
 - https://developer.android.com/training/volley/index.html
