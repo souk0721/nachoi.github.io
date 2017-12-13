@@ -33,10 +33,12 @@ code {
 	border-radius: 3px;
 	padding: 0 3px;
 	font-size: modular-scale(-1);
+	font-family: $monospace;
 }
 
 pre code.hljs {
 	font-size: modular-scale(-1);
+	font-family: $monospace;
 }
 
 .page-divider {
