@@ -116,6 +116,7 @@ protected void onDestroy() {
 
 ```java
 LocalBroadcastManager.getInstance(Context).registerReceiver(BroadcastReceiver, IntentFilter)
+LocalBroadcastManager.getInstance(Context).sendBroadcast(IntentFilter)
 ```
 <br><br>
 
