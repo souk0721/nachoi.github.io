@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Android][Kotlin] 안드로이드 Broadcast"
+title:  "[Android] 안드로이드 Broadcast"
 author: Yena Choi
 categories: studynote
 tags: [android]
