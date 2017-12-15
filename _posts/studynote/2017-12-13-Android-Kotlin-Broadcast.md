@@ -31,7 +31,7 @@ Broadcast가 '방송하다'라는 의미을 가진 것처럼, 특정한 Broadcas
   </intent-filter>
 </receiver>
 ```
-위와 같이 receiver를 정의하면 `intent-filter`를 통해 Broadcast가 액션을 특정할 수 있다. 여기서는 충전기 연결/충전기 연결해제 두 가지 액션을 확인하도록 설정했다.
+위와 같이 receiver를 정의하면 `intent-filter`를 통해 Broadcast가 액션을 특정할 수 있다. 여기서는 충전기 연결/해제 두 가지 액션을 확인하도록 설정했다.
 <br>
 
 그 후 `BroadcastReceiver`를 extend(상속)받는 클래스를 하나 생성하고, `onReceive(Context, Intent)` 메소드를 override(재정의)한다.
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_POWER_CONNECTED);
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+        /* 충전기 연결/해제 액션을 intentFilter에 등록 */
 
         receiver = new BroadcastReceiver() {
             @Override
@@ -107,6 +108,14 @@ protected void onDestroy() {
     }
     super.onDestroy();
 }
+```
+<br>
+
+#### LocalBroadcastManager
+시스템 혹은 다른 App이 아니라, 하나의 App 내에서 발생한 Broadcast를 수신하려면 `LocalBroadcastManager`를 사용해야 한다. (*ex.두 액티비티 간 송수신되는 Broadcast*)
+
+```java
+LocalBroadcastManager.getInstance(Context).registerReceiver(BroadcastReceiver, IntentFilter)
 ```
 <br><br>
 
