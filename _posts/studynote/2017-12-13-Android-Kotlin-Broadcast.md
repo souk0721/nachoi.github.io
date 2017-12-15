@@ -9,9 +9,7 @@ tags: [android]
 ## Broadcast
 안드로이드 앱에서는 시스템이나 다른 앱으로 Broadcast를 보내거나 받을 수 있다. 이 브로드캐스트는 특정 이벤트가 발생했을 때 전송된다. 예를 들어, 안드로이드 시스템은 부팅되거나 충전되는 등의 상황에서 Broadcast를 보낸다. 앱에서는 데이터 다운로드 완료가 될 때처럼, 다른 곳에 알려주고 싶을 때 Broadcast를 보낼 수 있다.
 
-Broadcast가 '방송하다'라는 의미을 가진 것처럼, 특정한 Broadcast를 수신하기 위해서는 그것을 등록(register)해두어야 한다. 쉽게 생각해서, 특정 라디오 채널 방송을 듣기 위해 주파수를 맞추는 것과 유사하다.
-
-앱에서 여러 개의 Broadcast를 쓸 수 있지만, 너무 많을 경우 백그라운드 작업이 계속 되어 메모리가 낭비될 수 있다.
+Broadcast가 '방송하다'라는 의미을 가진 것처럼, 특정한 Broadcast를 수신하기 위해서는 그것을 등록(register)해두어야 한다. 쉽게 생각해서, 특정 라디오 채널 방송을 듣기 위해 주파수를 맞추는 것과 유사하다. 앱에서 여러 개의 Broadcast를 쓸 수 있지만, 너무 많을 경우 백그라운드 작업이 계속 되어 메모리가 낭비될 수 있다.
 <br><br>
 
 ## Broadcast 수신
@@ -60,10 +58,59 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 <br><br>
 
 ### 2. context에 등록하기
+Context에 등록하는 방식의 BroadcastReceiver는 그 context를 사용할 수 있을 때까지만 유효하다. 만약 `Activity`의 context에 등록했다면 그 액티비티가 `onDestroy()`될 때까지 유효하며, `Application` context에 등록했다면 App이 종료될 때까지 유효할 것이다.
 
+```java
+/* MainActivity.java */
+public class MainActivity extends AppCompatActivity {
 
+    BroadcastReceiver receiver;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_POWER_CONNECTED);
+        filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+
+        receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String message = ("액션 발생! " + intent.getAction());
+                Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+            }
+        };
+    }
+}
+```
+<br><br>
+
+#### Unregister BroadcastReceiver
+코드로 Broadcast를 등록할 때의 주의할 것은 **receiver의 사용이 끝날 때에는 등록을 해제(unregister)** 해주어야 한다는 점이다. App이 종료되었는데도 receiver가 작동한다면, 디바이스에서 불필요한 메모리를 계속 사용하게 되기 때문이다.
+
+Receiver를 등록/해제하는 lifecycle의 시점은 일관성 있게 작성해야 한다. `onCreate(Bundle)`에서 등록했다면 `onDestroy()`에서 해제해주어야 하고, `onResume()`에서 등록했다면, 중복 등록을 막기 위해 `onPause()`에서 해제해주어야 한다. 또한 unregister 하기 전에, `if` 등으로 receiver null 체크를 할 필요가 있다.
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    ...
+    registerReceiver(receiver, filter);
+    super.onCreate(savedInstanceState);
+}
+
+@Override
+protected void onDestroy() {
+    if (receiver != null) {
+        unregisterReceiver(receiver);
+        receiver = null;
+    }
+    super.onDestroy();
+}
+```
 <br><br>
 
 ### References
 
 - https://developer.android.com/guide/components/broadcasts.html
+- https://stackoverflow.com/questions/4805269/programmatically-register-a-broadcast-receiver
