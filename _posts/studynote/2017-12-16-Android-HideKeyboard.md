@@ -31,6 +31,17 @@ fun View.hideKeyboard() {
 ```
 <br><br>
 
+### manifest에서 하기
+매니페스트에서도 키보드 설정을 바꿀 수 있다. 예를 들어 MainActivity가 로드 될 때 키보드를 숨기고 싶은 경우에는 manifest에 등록된 activity에 다음과 같이 `stateAlwaysHidden` 항목을 추가하면 된다.
+
+```xmlns
+<activity
+    android:name=".MainActivity"
+    android:windowSoftInputMode="stateAlwaysHidden"
+    ... >
+</activity>
+```
+<br><br>
 
 ### References
 - https://stackoverflow.com/questions/1109022/close-hide-the-android-soft-keyboard
