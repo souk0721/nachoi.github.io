@@ -95,6 +95,8 @@ val dialogRatingBar = dialogView.findViewById<RatingBar>(R.id.dialogRb)
 ### 4. 확인/취소 등의 버튼을 설정
 Builder를 통해 확인 버튼(PositiveButton)과 취소 버튼(NegativeButton)을 만들 수 있다. 꼭 확인/취소가 아니더라도, 액션에 따라 원하는 텍스트를 입력해주면 된다.
 
+람다식을 이용해 `setPositiveButton`, `setNegativeButton` 액션을 설정할 수 있다.
+
 ```
 Kotlin
 builder.setView(dialogView)
@@ -146,11 +148,11 @@ class MainActivity : AppCompatActivity() {
 App을 실행시켜 버튼을 눌러 Dialog를 호출해보았다. 확인 버튼을 누르면 Dialog에 있던 text와 rating 값이 메인 액티비티에도 적용된다!
 
 <center>
-<img src="/assets/post-img/171217-02.JPG" width="40%" height="40%">
-<img src="/assets/post-img/171217-03.JPG" width="40%" height="40%">
-<img src="/assets/post-img/171217-04.JPG" width="40%" height="40%">
+<img src="/assets/post-img/171217-02.JPG" width="40%" height="40%"><br>
+<img src="/assets/post-img/171217-03.JPG" width="40%" height="40%"><br>
+<img src="/assets/post-img/171217-04.JPG" width="40%" height="40%"><br>
 </center>
-
+<br><br>
 
 
 
