@@ -9,7 +9,7 @@ tags: [android, kotlin]
 ## SharedPreferences
 데이터를 영구 저장하는 방법으로는 SharedPreferences(쉐어드프리퍼런스)가 있다. App에 포함되는 데이터 파일을 만들어서, 디바이스에 저장하는 방식이다. `(key, value)` 형태로 저장/로드한다. 또한 `.edit()` 에디터를 이용해야 데이터의 수정, 삭제 등의 액션이 가능하다. 주로 'editor'라는 변수명에 저장해서 사용한다.
 
-`MainActivity`에서 쓸 수 있는 SharedPreferences 예제는 다음과 같다.
+`MainActivity`의 `onCreate`에서 쓸 수 있는 SharedPreferences 예제는 다음과 같다.
 
 
 ```Kotlin
@@ -17,7 +17,7 @@ val pref = this.getPreferences(0)
 val editor = pref.edit()
 /* context.getPreferences의 SharedPreferences 인스턴스를 저장.
  * (0은 (Context.MODE_PRIVATE)와 같음)
- * 에디터를 호출해 editor로 초기화./
+ * 에디터를 호출해 editor로 초기화. */
 
  mainEt.setText(pref.getString("MessageKey", ""))
  /* mainEt(EditText)의 텍스트를 "MessageKey"에 해당하는 vaule로 설정.
@@ -39,9 +39,9 @@ val editor = pref.edit()
 
 <center>
   <img src="/assets/post-img/171218-01.JPG" width="40%" height="40%">
-    <br><br> 텍스트를 저장한 후, 앱을 종료후 재실행 하거나 다시 Build하면 EditText에 저장했던 텍스트가 표시된다. <br><br>
+    <br> 텍스트를 저장한 후, 앱을 종료후 재실행 하거나 다시 Build하면 EditText에 저장했던 텍스트가 표시된다. <br><br>
   <img src="/assets/post-img/171218-02.JPG" width="40%" height="40%">
-    <br><br> 재실행한 모습. <br><br>
+    <br> 앱을 재실행한 모습. <br><br>
 </center>
 <br><br>
 
