@@ -13,11 +13,11 @@ tags: [android, kotlin, view]
 넘버 피커는 안드로이드 스튜디오의 Palette - Advanced - NumberPicker를 통해 레이아웃에 추가할 수 있다.
 
 <center>
-  <img src="/assets/post-img18/180119-01.JPG" width="100%" height="100%"><br>
+  <img src="/assets/post-img18/180119-01.jpg" width="100%" height="100%"><br>
 </center>
 <br>
 
-코틀린에서는 `findViewById` 할 필요가 없으므로, MainActivity에서 id를 입력해서 import 한다. 우선 넘버피커의 최소 값과 최대 값을 지정한다. 이 예제에서는 activity_main.xml 레이아웃에서 넘버피커의 id를 mNumberPicker로 사용했다.
+코틀린에서는 `findViewById` 할 필요가 없으므로, MainActivity에서 id를 입력해서 import 한다. 우선 넘버피커의 최소 값과 최대 값을 정한다. 이 예제에서는 activity_main.xml 레이아웃에서 넘버피커의 id를 mNumberPicker로 지정했다.
 
 ```Kotlin
 /* MainActivity.kt */
@@ -29,7 +29,7 @@ mNumberPicker.maxValue = 12
 minVaule와 maxValue만 설정하고 실행하면 기본적인 NumberPicker가 생성된다.
 
 <center>
-  <img src="/assets/post-img18/180119-02.JPG" width="40%" height="40%"><br>
+  <img src="/assets/post-img18/180119-02.jpg" width="40%" height="40%"><br>
 </center>
 <br>
 
@@ -64,7 +64,7 @@ mNumberPicker.setOnValueChangedListener { numberPicker, i1, i2 ->
 <br>
 
 <center>
-  <img src="/assets/post-img18/180119-03.JPG" width="40%" height="40%"><br>
+  <img src="/assets/post-img18/180119-03.jpg" width="40%" height="40%"><br>
 </center>
 <br>
 
