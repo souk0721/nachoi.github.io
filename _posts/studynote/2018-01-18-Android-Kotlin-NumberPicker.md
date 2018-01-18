@@ -42,7 +42,7 @@ mNumberPicker.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
 <br><br>
 
 #### setOnValueChangedListener
-액티비티에 실시간으로 값을 반영할 때에는 `setOnValueChangedListener`를 사용할 수 있다. 넘버피커, 기존 Int, 변경된 Int를 통해 식을 작성할 수 있다. 하단에 mTextView라는 id를 가지는 텍스트뷰를 추가해서 예제를 작성해보았다.
+액티비티에 실시간으로 값을 반영할 때에는 `setOnValueChangedListener`를 사용할 수 있다. 넘버피커, 기존 Int, 변경된 Int를 통해 식을 작성한다. 예제의 하단에 mTextView라는 id를 가지는 텍스트뷰를 추가해서 응용해보았다.
 
 ```Kotlin
 mNumberPicker.minValue = 0
@@ -67,7 +67,18 @@ mNumberPicker.setOnValueChangedListener { numberPicker, i1, i2 ->
   <img src="/assets/post-img18/180119-03.jpg" width="40%" height="40%"><br>
 </center>
 <br>
+넘버피커를 스크롤 하면 실시간으로 하단의 TextView가 바뀐다.
 
+<br><br>
+
+#### 선택된 값 가져오기
+~~중요한 걸 빼먹을 뻔했다~~
+
+실시간 값은 `setOnValueChangedListener` 함수를 사용하는 것이 개인적으로 더 편리하다. NumberPicker로 선택한 값은 `numberPicker.value`에 int 형식으로 저장된다. 그래서 최종 선택된 값을 전달할 때에는 int 변수에 value값을 담아서 사용한다.
+
+```Kotlin
+val picked = mNumberPicker.value
+```
 
 ### References
 - https://developer.android.com/reference/android/widget/NumberPicker.html
