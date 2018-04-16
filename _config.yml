@@ -8,7 +8,7 @@ exclude:
 
 # Site settings
 title: Nachoi Blog
-subtitle: 안드로이드 개발과 깃헙을 기웃거리는 나최의 블로그
+subtitle:
 email: 4nachoi@gmail.com
 name: Yena Choi
 description: >
@@ -16,7 +16,7 @@ description: >
 baseurl: ""
 url: "http://nachoi.github.io"
 cover: "/assets/header_171028.jpg"
-logo: "/assets/logo.png"
+logo: "/assets/logo_nachoi.png"
 
 # Build settings
 markdown: kramdown
@@ -43,7 +43,7 @@ google_analytics: "UA-109079446-1"
 # Category descriptions (for archive pages)
 descriptions:
   - cat: posts
-    desc: "성실도 - 성공한 것, 실패한 것, 도달한 결론을 기록하는 공간"
+    desc: "성실도 다이어리 - 성공한 것, 실패한 것, 도달한 결론을 기록하는 공간"
 
   - cat: studynote
     desc: "허투루 공부하지 않도록 기록하는 곳.
