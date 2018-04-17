@@ -6,6 +6,8 @@ categories: studynote
 tags: [android, layout]
 ---
 
+authorize  `1`
+
 ## ConstraintLayout
 - build.gradle (Module:app)에서 ConstraintLayout의 dependency를 추가해야 한다.
 - 몰랐던 ConstraintLayout 팁들
