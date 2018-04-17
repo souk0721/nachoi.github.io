@@ -14,7 +14,7 @@ name: Yena Choi
 description: >
   A woman who majored in literature but writes codes!
 baseurl: ""
-url: "http://nachoi.github.io"
+url: "https://nachoi.github.io"
 cover: "/assets/header_171028.jpg"
 logo: "/assets/logo_nachoi.png"
 
@@ -77,7 +77,7 @@ social:
     username: Yena Choi
     url: https://github.com/nachoi
     desc: Fork me on GitHub
-    share: false
+    share: true
 
   - name: LinkedIn
     icon: linkedin
@@ -112,7 +112,7 @@ social:
     username:
     url:
     desc: Follow me on Pinterest
-    share: true
+    share: false
 
   - name: SoundCloud
     icon: soundcloud
