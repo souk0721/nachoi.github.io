@@ -11,6 +11,10 @@ tags: [github]
 Github을 **Windows** 환경에서, **터미널** 로, **https** 주소로 로그인해서 쓰고 있다. 그런데 오랜만에 접속해보니 해봐도 다음과 같은 로그인 오류가 발생했다.
 
 ```
+git push origin master
+
+...
+
 fatal: HttpRequestException encountered.
     이 요청을 보내는 동안 오류가 발생했습니다.
 Username for 'https://github.com':
