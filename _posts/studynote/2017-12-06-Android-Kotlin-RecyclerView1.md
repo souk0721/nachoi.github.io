@@ -258,11 +258,8 @@ class MainActivity : AppCompatActivity() {
 마지막으로 recyclerView에 `setHasFixedSize` 옵션에 true 값을 준다. 그 이유는 item이 추가되거나 삭제될 때 RecyclerView의 크기가 변경될 수도 있고, 그렇게 되면 계층 구조의 다른 View 크기가 변경될 가능성이 있기 때문이다. 특히 item이 자주 추가/삭제되면 오류가 날 수도 있기에 setHasFixedSize true를 설정한다.
 <br><br>
 
-<<<<<<< HEAD
 각 item을 클릭 시의 이벤트 처리는 [RecyclerView(2) 포스트](/studynote/2017/12/07/Android-Kotlin-RecyclerView2.html)에 정리했다.
-=======
-각 item을 클릭 시의 이벤트 처리는 [RecyclerView(2) 포스트](/studynote/2017/12/07/Android-Kotlin-RecyclerView2.html)에 정리했다. 
->>>>>>> 03864abf7712627b4505c3ae0d59a6e625989d1c
+
 
 ### References
 - https://developer.android.com/guide/topics/ui/layout/recyclerview.html#structure
