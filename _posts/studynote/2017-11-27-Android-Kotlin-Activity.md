@@ -55,7 +55,12 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+<br>
+
+인텐트를 이용해 데이터 값 전달하는 방법은 아래 포스트 참조.
+- [\[Android\]\[Kotlin\] PutExtra 데이터 전달](/studynote/2017/11/28/Android-Kotlin-putExtra.html)
 <br><br>
+
 
 ### Reference
 - https://developer.android.com/kotlin/index.html

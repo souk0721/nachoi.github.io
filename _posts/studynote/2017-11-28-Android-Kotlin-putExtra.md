@@ -7,7 +7,7 @@ tags: [android, kotlin, intent]
 ---
 
 `Java`를 이용한 값 전달 방법은 [다른 포스트](/studynote/2017/11/06/Android-Intent.html)에 작성하였다.
-
+<br>
 
 ## PutExtra & GetExtra
 `Intent`를 통해 액티비티를 전환할 때에 `putExtra`를 통해 String이나 Int 등 간단한 데이터를 전달할 수 있다. `putExtra(key: String, value: 간단한 데이터)` 의 형식을 띤다.
@@ -19,10 +19,9 @@ val nextIntent = Intent(this, SecondActivity::class.java)
 nextIntent.putExtra("nameKey", "nachoi")
 startActivity(nextIntent)
 ```
+<br>
 
-FirstActivity에서 `putExtra` 한 후, SecondActivity 에서 `getStringExtra`, `getBooleanExtra` 등 자료형에 맞는 메소드를 사용하여 데이터를 꺼내올 수 있다.
-
-이때 **null check** 를 하지 않으면 0이나 null 등 잘못된 값을 꺼내올 수 있으므로, 해당 key가 전달할 값을 가지고 있는지 `if hasExtra`로 체크하는 것이 좋다.
+FirstActivity에서 `putExtra` 한 후, SecondActivity 에서 `getStringExtra`, `getBooleanExtra` 등 자료형에 맞는 메소드를 사용하여 데이터를 꺼내올 수 있다. 이때 **null check** 를 하지 않으면 0이나 null 등 잘못된 값을 꺼내올 수 있으므로, 해당 key가 전달할 값을 가지고 있는지 `if hasExtra`로 체크하는 것이 좋다.
 
 ```kotlin
 /* SecondActivity.kt */
