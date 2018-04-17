@@ -45,7 +45,7 @@ Button button = findViewById(R.id.button);
 `MainActivity`에서 `SecondActivity`로 간단한 자료형(Int, String, Boolean 등)의 데이터를 intent에 포함하여 전달할 수 있다. 인텐트를 정의한 후에 `putExtra`를 통해 값을 담을 수 있다.
 
 <center>
-![](/assets/post-img/171106-01.jpg)
+  <img src="/assets/post-img/171106-01.jpg"><br><br>
 
 여러 형태의 값을 put 할 수 있다.
 <br>
@@ -61,8 +61,9 @@ myIntent.putExtra("번호", 12345);
 myIntent.putExtra("메시지", "이것이 메시지의 vaule입니다.");
 /* 하나의 인텐트에 여러 형태, 여러 개의 extra 값을 담을 수 있다 */
 ```
+<br>
 
-그 후, `startActivity(myIntent)`를 실행하면 SecondActivity에서 `getIntent()`를 통해 값을 꺼내올 수 있다.
+그 후, `startActivity(myIntent)`를 실행하면 SecondActivity에서 `getIntent()`를 통해 새 인텐트를 만들고, `getExtra`로 값을 꺼내올 수 있다. 이때 입력한 자료값에 따라 `getStringExtra`, `getIntExtra` 등의 메소드를 사용한다.
 
 ```Java
 /* SecondActivity.java */
@@ -84,6 +85,7 @@ String message = secondIntent.getStringExtra("메시지");
 
 tv.setText(message);
 ```
+<br>
 
 <center>
 <img src="/assets/post-img/171106-02.jpg" width="40%" height="40%"><br><br>
@@ -103,6 +105,7 @@ tv.setText(message);
   /* SecondActivity.java */
   secondIntent.getStringExtra(Intent.EXTRA_TEXT);
   ```
+  <br>
 
 - 인텐트에 포함된 값을 꺼내오는 액티비티에서, `getExtra` 할 때 `if(intent.hasExtra)` 로 데이터가 있는지 확인하면 TextView를 ""로 바꾸는 등의 실수를 줄일 수 있다.
 
@@ -115,8 +118,8 @@ tv.setText(message);
           tv.setText(message);
   }
   ```
+  <br
 
-  <br>
   `hasExtra`를 암시적 intent에 응용하면, 사용 할만한 앱이 있을 경우에만 실행한다.
   ```java
   if (intent.resolveActivity(getPackagerManager()) != null) {
@@ -140,4 +143,6 @@ ShareCompat.IntentBuilder.from(this)
   **1) intent가 null인지 먼저 물어보고,**   
   **2) intent.hasExtra가 null인지 물어본 후에 getExtra**
 
+<br>
 나는 언젠가 이걸 빼먹고 에러를 낼 것 같다. 그러니까 bold처리.
+<br>
