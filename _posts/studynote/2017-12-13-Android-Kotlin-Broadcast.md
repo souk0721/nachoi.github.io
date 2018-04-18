@@ -20,8 +20,8 @@ Broadcast가 '방송하다'라는 의미을 가진 것처럼, 특정한 Broadcas
 ### 1. manifest에 선언하기   
 `BroadcastReceiver`를 manifest에 선언하면, 시스템은 Broadcast가 수신될 때 앱을 실행한다. 어떤 이벤트에 대해 알림을 받을 것인지 매니페스트에 정의해주면 된다.
 
-```java
-/* AndroidManifest.xml */
+```xml
+<!-- AndroidManifest.xml-->
 <receiver
   android:name=".MyBroadcastReceiver"
   android:exported="true">
@@ -49,15 +49,15 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 <br>
 
 <center>
-  <a href="../../../../assets/post-img/171213-charge.png" target="_blank">
+  <!-- <a href="../../../../assets/post-img/171213-charge.png" target="_blank"> -->
     <img src="/assets/post-img/171213-charge.png" width="100%" height="100%">
-  </a>
+  <!-- </a> -->
 </center>
 <br>
-배터리 충전 상태를 변경하면 시스템 이벤트를 인식하고 Broadcast를 보낸다_._
+배터리 충전 상태를 변경하면 시스템 이벤트를 인식하고 Broadcast를 보낸다.
 <br><br>
 
-### 2. context에 등록하기
+### 2. Context에 등록하기
 Context에 등록하는 방식의 BroadcastReceiver는 그 context를 사용할 수 있을 때까지만 유효하다. 만약 `Activity`의 context에 등록했다면 그 액티비티가 `onDestroy()`될 때까지 유효하며, `Application` context에 등록했다면 App이 종료될 때까지 유효할 것이다.
 
 ```java
