@@ -27,7 +27,76 @@ ConstraintLayout(컨스트레인트 레이아웃)은 위치와 크기 조절을 
   ▲ Nexus 10 (2560 x 1600) <br><br>
 
 </center>
-<br><br>
+<br>
+`app`-`res`-`layout`-`activity_main.xml` 에서 코드를 살펴보면 다음과 같다.
+
+```xml
+<!-- activity_main.xml -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Hello Layout!"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/simpsonize_nachoi" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.2" />
+
+</android.support.constraint.ConstraintLayout>
+```
+<br>
+
+예제에서의 액티비티는 1) TextView, 2) ImageView, 3) Button의 세 가지 뷰로 구성되어 있다. 각 뷰는 필수적으로 가로와 세로 높이를 나타내는 속성을 가지고 있어야 한다.
+
+- `android:layout_width` : 뷰의 가로 길이를 나타냄. (폭, 너비)
+- `android:layout_height` : 뷰의 세로 길이를 나타냄. (높이)
+
+그리고 이 가로, 세로 속성은 다시 3종류의 값을 가질 수 있다.
+
+- `none` : 화면의 비율에 상관 없이 고정 값을 갖는다. `dp` 단위로 표기한다.
+- `wrap_content` : 뷰가 차지하는 크기 만큼의 길이. Image의 경우, 특별히 dp값을 지정하지 않으면 원본 크기가 되며, TextView의 경우는 글자를 감싸는 크기가 된다.
+- `match_constraint` : 실제로 xml 파일에서는 `"0dp"`로 표기한다. 뷰의 가로 혹은 세로를 다른 곳에 고정시킨 후, 해당하는 영역을 모두 차지한다. 
+
+
+<br>
+
 
 ### 그 밖의 참고사항
 
