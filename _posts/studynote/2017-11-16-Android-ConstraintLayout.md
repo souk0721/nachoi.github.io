@@ -7,7 +7,7 @@ tags: [android, layout]
 ---
 
 언제부턴가 Android Studio에서 ConstraintLayout 를 강력하게 밀고 있는 듯하다. New project를 만들면 기본적으로 생성되는 "Hello World!" 텍스트가 있는 액티비티도 ConstraintLayout으로 생성된다.
-<br>
+<br><br>
 
 ## ConstraintLayout
 
@@ -80,7 +80,7 @@ ConstraintLayout(컨스트레인트 레이아웃)은 위치와 크기 조절을 
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintVertical_bias="0.2" />
 
 </android.support.constraint.ConstraintLayout>
 ```
@@ -114,7 +114,7 @@ android:layout_height="wrap_content"
 <br>
 
 
-### 특징(2) - constraint (A)\_to(B)Of
+### 특징(2) - constraint(A)\_to(B)Of
 
 xml 파일을 살펴보면 공통적으로 여러 개의 constraint(A)\_to(B)Of 옵션을 가지고 있다. 말 그대로 상/하/좌/우를 다른 뷰의 어느 곳에 연결할 것인지 정해주는 옵션이다. **constraint** 를 정해주지 않으면 경고 표시가 발생하며, View를 다른 곳에 연결하지 않은 채 앱을 실행하면 View가 좌측 상단으로 이동해버린다. 그렇기 때문에 반드시 다른 View 혹은 Parent에 연결해야 한다.
 
@@ -126,13 +126,13 @@ app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
 ```
 길이 값이 wrap_content이면서 4방향 모두 parent에 연결되어 있을 때 View는 예제와 같이 화면 중앙에 위치하게 된다. (만약 길이 값이 match_constraint인 경우에는 parent의 크기에 맞춰 이미지가 크기가 늘어난다.)
+<br>
 
 다음으로, **TextView**는 좌측이 ImageView의 좌측에, 하단이 ImageView의 상단에 각각 연결되어 있다.
 ```xml
 app:layout_constraintBottom_toTopOf="@+id/imageView"
 app:layout_constraintStart_toStartOf="@+id/imageView"
 ```
-<br>
 View의 id값을 통해 View를 찾고, 이를 기준으로 constraint 옵션이 생긴다. 하단에는 `layout_marginBottom` 값이 있기 때문에 8dp의 여백이 생긴다. 이 값이 없다면 TextView는 ImageView 바로 위에 위치하게 된다.
 ```xml
 android:layout_marginBottom="8dp"
@@ -146,19 +146,18 @@ app:layout_constraintEnd_toEndOf="@+id/imageView"
 app:layout_constraintStart_toStartOf="@+id/imageView"
 app:layout_constraintTop_toBottomOf="@+id/imageView"
 ```
-<br>
-
 좌우는 ImageView에, 상하는 각각 ImageView와 parent에 연결되었다. match_constraint 옵션이기 때문에 ImageView의 width와 길이가 같다. 만약 다른 곳에 연결한다면 Button의 크기도 달라지게 된다.
-<br>
+<br><br>
 
 <center>
   <img src="/assets/post-img18/180418-04.jpg"/>
 </center>
 <br>
-Button의 Start와 End를  **ImageView, TextView, parent** 의 좌우에 연결했을 때 `match_constraint`, 즉 `android:layout_width="0dp"` 값을 가질 때 위와 같이 적용된다.
+Button의 Start와 End를  **ImageView, TextView, parent** 의 좌우에 연결했을 때 `match_constraint`, 즉 `android:layout_width="0dp"` 값을 가질 때 각각 연결된 View에 따라 크기가 바뀐다. 추가로 `marginStart`, `marginEnd` 값인 8dp만큼 좌우에 여백이 생긴다.
+
 <br>
 
-Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문에 그 사이에 위치하게 된다.
+Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문에 그 사이에 위치하게 된다. 여기서는 20% 비율의 높이에 위치하도록 설정되어 있다.
 
 <br>
 
@@ -174,11 +173,14 @@ Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문�
 
 - Bias (비율 조정)
 
-  상하나 좌우를 연결했을 때, 이미지는 가운데에 위치하게 된다. 이때, **bias** 옵션을 주면 0~1 사이 옵션에서 중앙 (0.5)이 아닌 비율로 정렬이 가능하다. Button은 상하가 ImageView와 parent에 연결되어 있고, bias 값을 주지 않으면 기본적으로 중앙에 위치한다. 본 예제와 같이 bias 값을 조정하면 0~1 (0%~100%) 비율로 위치하게 된다. 여러 해상도에 같은 비율을 적용해야 할 때 유용한 옵션이다.
+  상하나 좌우를 연결했을 때, 이미지는 가운데에 위치하게 된다. 이때, **bias** 옵션을 주면 0~1 사이 옵션에서 중앙 (0.5)이 아닌 비율로 정렬이 가능하다. Button은 상하가 ImageView와 parent에 연결되어 있고, bias 값을 주지 않으면 기본적으로 중앙에 위치한다. 예제와 같이 bias 값을 조정하면 0~1 (0%~100%) 비율로 위치하게 된다.
 
   ```xml
-  app:layout_constraintVertical_bias="0.19999999  
+  app:layout_constraintVertical_bias="0.2"  
   ```
+  <br>
+  이제 버튼은 이미지와 맨 밑 사이의 공간에서 20%에 해당하는 곳에 위치하게 된다. 여러 해상도에 같은 비율을 적용해야 할 때 유용한 옵션이다.
+
   <br>
 
 
@@ -204,6 +206,7 @@ Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문�
   android:text="실제 App에 표시되는 text들"
   tools:text="디자인을 위해서만 필요한 Fake text들"
   ```
+  <br>
 
 - marginLeft 와 marginStart 차이
 
@@ -214,10 +217,11 @@ Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문�
   android:layout_marginStart="10dp"
   ```
 
-  즉 marginLeft는 절대적으로 왼쪽에서 시작하는 것이고, marginStart는 설정된 언어가 시작되는 방향에서 시작되는 것이다. 한글이나 영어를 사용할 경우 실질적으로 결과에는 차이가 없다. 나 같은 경우 marginStart 를 사용하고 있지만, 앱 특징에 따라 절대적으로 왼쪽에 여백을 주어야 할 경우 marginLeft를 사용하면 되겠다.
+  즉 marginLeft는 절대적으로 왼쪽에서 시작하는 것이고, marginStart는 설정된 언어가 시작되는 방향에서 시작되는 것이다. 한글이나 영어를 사용할 경우 실질적으로 결과에는 차이가 없다. 나의 경우 marginStart 를 사용하고 있지만, 앱 특징에 따라 절대적으로 왼쪽에 여백을 주어야 할 경우 marginLeft를 사용하면 되겠다.
 
 <br><br>
+
 ### References
 - https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html
 
-<br><br>
+<br>
