@@ -156,39 +156,68 @@ app:layout_constraintTop_toBottomOf="@+id/imageView"
 </center>
 <br>
 Button의 Start와 End를  **ImageView, TextView, parent** 의 좌우에 연결했을 때 `match_constraint`, 즉 `android:layout_width="0dp"` 값을 가질 때 위와 같이 적용된다.
+<br>
 
+Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문에 그 사이에 위치하게 된다.
 
 <br>
+
+### 특징(3) - 비율에 따른 View 조절
+- 정사각형 이미지
+
+  ImageView의 옵션 중 다음과 같은 옵션이 있다.
+
+  ```xml
+  app:layout_constraintDimensionRatio="1:1"
+  ```
+  이미지가 정사각형이 아닐 때에 위 옵션을 적용해준다면 1:1 비율로 설정된다. 자세한 것은 [Layout Tips](/studynote/2017/11/23/Android-Layout-Tips.html) 포스트에 작성해두었다.
+
+- Bias (비율 조정)
+
+  상하나 좌우를 연결했을 때, 이미지는 가운데에 위치하게 된다. 이때, **bias** 옵션을 주면 0~1 사이 옵션에서 중앙 (0.5)이 아닌 비율로 정렬이 가능하다. Button은 상하가 ImageView와 parent에 연결되어 있고, bias 값을 주지 않으면 기본적으로 중앙에 위치한다. 본 예제와 같이 bias 값을 조정하면 0~1 (0%~100%) 비율로 위치하게 된다. 여러 해상도에 같은 비율을 적용해야 할 때 유용한 옵션이다.
+
+  ```xml
+  app:layout_constraintVertical_bias="0.19999999  
+  ```
+  <br>
 
 
 ### 그 밖의 참고사항
 
-- 이전에는 `build.gradle(Module:app)`에서 ConstraintLayout의 dependency를 추가해야 했는데, 요즘에는 자동으로 implementation에 추가되는 것 같다. 만약 없다면 아래와 같은 형태로 그래들에 추가 해야 한다.
+- dependency
+
+  이전에는 `build.gradle(Module:app)`에서 ConstraintLayout의 dependency를 추가해야 했는데, 요즘에는 자동으로 implementation에 추가되는 것 같다. 만약 프로젝트에 dependency가 없다면 아래와 같은 형태로 그래들에 추가 해야 한다.
+    ```
+    dependencies {
+        ...
+        implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    }
+    ```
+
+<br>
+
+- TextView 미리보기 전용 텍스트
+
+  `android:text`에 텍스트를 입력하면 앱을 실행했을 때에도 해당 텍스트가 보인다. 레이아웃 디자인 시에만 텍스트를 보이게 하려면 `tools:text` 로 텍스트를 입력할 수 있다. tools로 입력한 텍스트는 앱을 실행했을 때에는 보이지 않는다.
+
+  ```xml
+  android:text="실제 App에 표시되는 text들"
+  tools:text="디자인을 위해서만 필요한 Fake text들"
   ```
-  dependencies {
-      ...
-      implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-  }
+
+- marginLeft 와 marginStart 차이
+
+  xml에서 marginLeft 값을 줄 수도 있고, marginStart 값을 줄 수도 있다. 그런데 Design 툴에서 마우스로 Constraint 연결 시에 marginStart로 표시되는 것을 볼 수 있다. 실제로 우리가 사용하는 대부분의 앱에서는 둘의 차이가 없다. 그 이유는 **한글은 왼쪽 -> 오른쪽 방향으로 쓰기 때문에, 즉 왼쪽에서 시작하기 떄문이다.** 하지만 오른쪽 -> 왼쪽으로 쓰는 언어의 경우 marginLeft를 사용하면 기대와는 다른 결과가 나올 것이다.
+
+  ```
+  android:layout_marginLeft="10dp"
+  android:layout_marginStart="10dp"
   ```
 
+  즉 marginLeft는 절대적으로 왼쪽에서 시작하는 것이고, marginStart는 설정된 언어가 시작되는 방향에서 시작되는 것이다. 한글이나 영어를 사용할 경우 실질적으로 결과에는 차이가 없다. 나 같은 경우 marginStart 를 사용하고 있지만, 앱 특징에 따라 절대적으로 왼쪽에 여백을 주어야 할 경우 marginLeft를 사용하면 되겠다.
 
-- 몰랐던 ConstraintLayout 팁들
-```
-android:layout_marginLeft="10dp" // 좌측 여백을 위한것.
-android:layout_marginStart="10dp" // UI의 좌우를 바꿀때 필요. (Left와 dp값 같게)
-android:text="실제 App에 표시되는 text들"
-tools:text="디자인을 위해서만 필요한 Fake text들"
-```
-
-- View가 기준이 되는 Layout의 상/하단 중심에 오게 하려면
-  `constraintTop_toBottomOf` 및 `constraintBottom_toTopof` 해야한다.
-
-
-- View의 수적/수평 조건은 다음 셋 중 하나의 방식으로 동작한다.
-  1. 고정 크기(Fixed)
-  2. 늘거나 줄면서 조건유지(AnySize)
-  3. Wrap Content
-
+<br><br>
 ### References
 - https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html
--
+
+<br><br>
