@@ -9,7 +9,7 @@ tags: [android, layout]
 언제부턴가 Android Studio에서 ConstraintLayout 를 강력하게 밀고 있는 듯하다. New project를 만들면 기본적으로 생성되는 "Hello World!" 텍스트가 있는 액티비티도 ConstraintLayout으로 생성된다.
 <br><br>
 
-## ConstraintLayout
+## ConstraintLayout란
 
 ConstraintLayout(컨스트레인트 레이아웃)은 위치와 크기 조절을 유연하게 할 수 있는 ViewGroup이다. 다양한 해상도를 지원하는 앱 작업을 할 때 상당히 편리하다.
 
@@ -31,6 +31,12 @@ ConstraintLayout(컨스트레인트 레이아웃)은 위치와 크기 조절을 
 
 </center>
 <br>
+
+뷰와 뷰 간의 관계가 절대적인 수치 값이 아닌 상대적인 비율로 지정되어 있기 때문에, 위처럼 다양한 해상도에서 원하는 레이아웃 모양대로 정렬하여 나타낼 수 있다.
+
+<br><br>
+
+## ConstraintLayout의 주요 속성
 
 이제 하나씩 살펴보자. `app`-`res`-`layout`-`activity_main.xml` 에서 xml 파일로 된 레이아웃 코드를 볼 수 있다. Design 탭에서 직접 뷰를 보면서 조정해도 된다. Design탭과 xml 탭에서 내용을 변경할 시 다른 한 쪽에서도 자동으로 변경된다.
 
@@ -91,6 +97,8 @@ ConstraintLayout(컨스트레인트 레이아웃)은 위치와 크기 조절을 
 - `android:layout_width` : 뷰의 가로 길이를 나타냄. (폭, 너비)
 - `android:layout_height` : 뷰의 세로 길이를 나타냄. (높이)
 
+<br>
+
 그리고 이 가로, 세로 속성은 3종류의 값을 가질 수 있다.
 
 - `none` : 화면의 비율에 상관 없이 고정 값을 갖는다. `dp` 단위로 표기한다.
@@ -146,7 +154,7 @@ app:layout_constraintEnd_toEndOf="@+id/imageView"
 app:layout_constraintStart_toStartOf="@+id/imageView"
 app:layout_constraintTop_toBottomOf="@+id/imageView"
 ```
-좌우는 ImageView에, 상하는 각각 ImageView와 parent에 연결되었다. match_constraint 옵션이기 때문에 ImageView의 width와 길이가 같다. 만약 다른 곳에 연결한다면 Button의 크기도 달라지게 된다.
+좌우는 ImageView에, 상하는 각각 ImageView와 parent에 연결되었다. width가 0dp이기 때문에 ImageView의 width 길이와 같아진다. 만약 다른 곳에 연결한다면 Button의 크기도 달라지게 된다.
 <br><br>
 
 <center>
@@ -154,9 +162,7 @@ app:layout_constraintTop_toBottomOf="@+id/imageView"
 </center>
 <br>
 Button의 Start와 End를  **ImageView, TextView, parent** 의 좌우에 연결했을 때 `match_constraint`, 즉 `android:layout_width="0dp"` 값을 가질 때 각각 연결된 View에 따라 크기가 바뀐다. 추가로 `marginStart`, `marginEnd` 값인 8dp만큼 좌우에 여백이 생긴다.
-
 <br>
-
 Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문에 그 사이에 위치하게 된다. 여기서는 20% 비율의 높이에 위치하도록 설정되어 있다.
 
 <br>
@@ -169,7 +175,7 @@ Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문�
   ```xml
   app:layout_constraintDimensionRatio="1:1"
   ```
-  이미지가 정사각형이 아닐 때에 위 옵션을 적용해준다면 1:1 비율로 설정된다. 자세한 것은 [Layout Tips](/studynote/2017/11/23/Android-Layout-Tips.html) 포스트에 작성해두었다.
+  이미지가 정사각형이 아닐 때에 위 옵션을 적용해준다면 1:1 비율로 설정된다. 자세한 것은 [Layout Tips](/studynote/2017/11/23/Android-Layout-Tips.html) 포스트를 참고할 수 있다.
 
 - Bias (비율 조정)
 
@@ -188,7 +194,7 @@ Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문�
 
 - dependency
 
-  이전에는 `build.gradle(Module:app)`에서 ConstraintLayout의 dependency를 추가해야 했는데, 요즘에는 자동으로 implementation에 추가되는 것 같다. 만약 프로젝트에 dependency가 없다면 아래와 같은 형태로 그래들에 추가 해야 한다.
+  이전에는 `build.gradle(Module:app)`에서 ConstraintLayout의 dependency를 추가해야 했는데, 요즘에는 자동으로 implementation에 추가되는 것 같다. 만약 프로젝트에 dependency가 없다면 아래와 같은 형태로 추가 해야 ConstraintLayout을 사용할 수 있다.
     ```
     dependencies {
         ...
@@ -217,7 +223,7 @@ Button의 Top과 Bottom은 ImageView와 parent에 각각 연결되었기 때문�
   android:layout_marginStart="10dp"
   ```
 
-  즉 marginLeft는 절대적으로 왼쪽에서 시작하는 것이고, marginStart는 설정된 언어가 시작되는 방향에서 시작되는 것이다. 한글이나 영어를 사용할 경우 실질적으로 결과에는 차이가 없다. 나의 경우 marginStart 를 사용하고 있지만, 앱 특징에 따라 절대적으로 왼쪽에 여백을 주어야 할 경우 marginLeft를 사용하면 되겠다.
+  다시 말하면 marginLeft는 절대적으로 왼쪽에서 시작하는 것이고, marginStart는 설정된 언어가 시작되는 방향에서 시작되는 것이다. 한글이나 영어를 사용할 경우 실질적으로 결과에는 차이가 없다. 나의 경우 marginStart 를 사용하고 있지만, 앱 특징에 따라 절대적으로 왼쪽에 여백을 주어야 할 경우 marginLeft를 사용하면 되겠다.
 
 <br><br>
 
