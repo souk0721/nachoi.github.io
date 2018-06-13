@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] NumberPicker 넘버피커 숫자 선택"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, view]
+comments: true
 ---
 
 앱을 만들면서 유저로부터 숫자를 입력받아야 할 때가 있다. 일일히 타이핑을 해야 하는 EditText보다 `NumberPicker` 넘버피커를 이용하면 더 쉽게 숫자를 선택할 수 있다.

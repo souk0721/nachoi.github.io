@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] SharedPreferences 데이터 영구 저장"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin]
+comments: true
 ---
 
 ## SharedPreferences
