@@ -33,7 +33,7 @@ layout: default
         {% endif %}
       {% endfor %}{% endif %}
       </div>
-      <a href="https://nachoi.github.io{{ post.url }}#disqus_thread">0 Comments</a>
+      <a href="{{ site.url }}{{ post.url }}#disqus_thread">0 Comments</a>
     </section>
   </li>
   {% if forloop.last == false %}
