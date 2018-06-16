@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] 액티비티 전환하기"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, intent, activity]
+comments: true
 ---
 
 `Java`를 이용한 액티비티 전환은 [다른 포스트](/studynote/2017/11/06/Android-Intent.html)에 작성하였다.

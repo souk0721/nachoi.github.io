@@ -4,6 +4,7 @@ title:  "[Android] DataBinding 데이터 바인딩"
 author: Yena Choi
 categories: studynote
 tags: [android]
+comments: true
 ---
 
 ## DataBinding

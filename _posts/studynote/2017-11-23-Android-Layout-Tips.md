@@ -4,6 +4,7 @@ title:  "[Android] Layout Design Tips 레이아웃 꾸미기"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, layout]
+comments: true
 ---
 
 

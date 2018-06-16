@@ -5,6 +5,7 @@ date:   2017-11-06
 author: Yena Choi
 categories: studynote
 tags: [android, activity, intent]
+comments: true
 ---
 
 코틀린의 경우, 다음 링크 참조

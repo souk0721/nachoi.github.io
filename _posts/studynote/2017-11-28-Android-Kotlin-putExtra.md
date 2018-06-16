@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] PutExtra 데이터 전달"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, intent]
+comments: true
 ---
 
 `Java`를 이용한 값 전달 방법은 [다른 포스트](/studynote/2017/11/06/Android-Intent.html)에 작성하였다.

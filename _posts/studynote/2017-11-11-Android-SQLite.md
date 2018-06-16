@@ -1,9 +1,10 @@
----
+<!-- ---
 layout: post
 title:  "[Android] SQLite 데이터 저장하기"
 author: Yena Choi
 categories: studynote
 tags: [android]
+
 ---
 
 ## SQLite
@@ -27,4 +28,4 @@ tags: [android]
   5) MainActivity에서는 새 DBHelper를 선언 (getApp~context(), ".db이름", cursor(|| null), ver)
   ```
 
-- onCreate하기 전에 SQL 자체를 선언하고, add나 remove 메소드를 만들어서, mDb.add나 remove
+- onCreate하기 전에 SQL 자체를 선언하고, add나 remove 메소드를 만들어서, mDb.add나 remove -->

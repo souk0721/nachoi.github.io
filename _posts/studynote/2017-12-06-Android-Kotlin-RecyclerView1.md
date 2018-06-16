@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] 코틀린 RecyclerView(1)"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, view]
+comments: true
 ---
 
 ## ListView와 RecyclerView

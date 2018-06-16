@@ -4,6 +4,7 @@ title:  "[Kotlin] Random 코틀린 랜덤"
 author: Yena Choi
 categories: studynote
 tags: [kotlin, function]
+comments: true
 ---
 
 코틀린에서 랜덤을 쓰기 위해서는 java.util을 import 해야한다. 안드로이드 스튜디오에서는 Alt + Enter로 import하면 java.util.* 전체가 임포트 된다.

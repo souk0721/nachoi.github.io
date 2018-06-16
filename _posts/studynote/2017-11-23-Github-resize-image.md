@@ -4,8 +4,9 @@ title:  "[GitHub] 이미지 사이즈 조절 & 정렬"
 author: Yena Choi
 categories: studynote
 tags: [github, jekyll, markdown, image]
+comments: true
 ---
-
+ 
 깃허브 포스트를 올렸는데, 이미지 크기가 원본보다 커져서 당황했다. 여차저차 구글링 해서 가로/세로 사이즈를 줄였는데, 가로 길이가 줄어들지 않는다. 어떻게든 줄여놓으니 또 이미지 정렬이 말썽이었다. 나중에 분명 이걸로 또 고생할 것 같아서 따로 포스트를 쓰기로 한다. 본 블로그는 Jekyll 지킬로 만들어졌으므로, 포스트도 지킬에 적용되는 부분을 기준으로 작성했다.
 
 ## 이미지 업로드

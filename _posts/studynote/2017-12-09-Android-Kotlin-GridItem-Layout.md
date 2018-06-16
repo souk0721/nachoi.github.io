@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] Grid item 그리드 아이템 만들기"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, view]
+comments: true
 ---
 
 

@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] Dialog 다이얼로그 "
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin]
+comments: true
 ---
 
 Dialog는 사용자에게 결정을 내리거나 추가 정보를 입력하라는 [prompt](https://www.google.co.kr/search?q=prompt&rlz=1C1NHXL_koKR691KR691&oq=prompt&aqs=chrome.0.69i59j69i60j0l4.839j1j9&sourceid=chrome&ie=UTF-8)를 보내는 작은 창이다. `Dialog` 클래스가 기본이지만, 직접 인스턴스화해서 사용하지 않는다. 대신, `AlertDialog`, `DatePickerDialog`, `TimePickerDialog` 서브클래스를 사용한다.

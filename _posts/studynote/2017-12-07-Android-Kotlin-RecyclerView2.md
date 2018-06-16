@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] 코틀린 RecyclerView(2)"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, view, lambda]
+comments: true
 ---
 
 [RecyclerView(1) 포스트](/studynote/2017/12/06/Android-Kotlin-RecyclerView1.html)에서는 리사이클러뷰를 통해 데이터를 출력하는 과정까지 정리했다. 이번 포스트에서는 코틀린 프로젝트에서 각 item을 클릭했을 때에 이벤트를 처리하는 방법을 정리했다.

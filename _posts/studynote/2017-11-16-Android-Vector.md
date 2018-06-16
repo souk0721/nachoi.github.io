@@ -4,6 +4,7 @@ title:  "[Android] Vector 벡터 리소스 사용하기"
 author: Yena Choi
 categories: studynote
 tags: [android, image]
+comments: true
 ---
 
 ## SVG 등의 벡터 이미지 사용하기

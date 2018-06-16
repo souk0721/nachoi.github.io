@@ -5,6 +5,7 @@ date:   2017-11-06
 author: Yena Choi
 categories: studynote
 tags: [android]
+comments: true
 ---
 
 ### Preferences 환경설정

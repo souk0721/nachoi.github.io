@@ -4,6 +4,7 @@ title:  "[GitHub] 깃허브 브랜치 기초 사용"
 author: Yena Choi
 categories: studynote
 tags: [github, branch]
+comments: true
 ---
 
 깃허브에 연습용 프로젝트를 올리면서 드디어 `git branch`의 필요성을 느꼈다. 이전에는 무조건 master 브랜치로만 작업하고, 틀렸을땐 강제로 `reset`과 `--force`로 돌려놓는 식으로 일했었다. 그러지 않기 위해서, 일단 깊은 이해보다는 빠르게 적용하기 위한 최소한의 내용만 기재했다.
@@ -37,7 +38,7 @@ test branch에서 commit 한 코드는 matser branch로 돌아와서 합칠 수 
 ### git merge 실패
 두 브랜치에서 같은 파일을 동시에 수정하고 merge하려고 할 경우, merge에 실패할 수 있다. 실패하게 되면 Git은 충돌(Conflict) 메세지를 출력한다.
 
-이때 어떤 파일에서 오류가 났는지 `git status` 명령어로 확인해볼 수 있다. 해당 파일을 수정한 후에 다시 merge를 진행한다. 
+이때 어떤 파일에서 오류가 났는지 `git status` 명령어로 확인해볼 수 있다. 해당 파일을 수정한 후에 다시 merge를 진행한다.
 <br><br>
 
 ### References

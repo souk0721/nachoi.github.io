@@ -4,6 +4,7 @@ title:  "[Android] 안드로이드 키보드 숨기기"
 author: Yena Choi
 categories: studynote
 tags: [android]
+comments: true
 ---
 
 EditText에 내용을 쓰고 버튼을 누르는 등 액션을 할때, 하단의 키보드가 자동으로 사라지게 하는 것이 사용하기 편하다.

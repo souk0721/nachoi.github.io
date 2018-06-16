@@ -4,6 +4,7 @@ title:  "[Android] Content Provider 컨텐트 프로바이더"
 author: Yena Choi
 categories: studynote
 tags: [android]
+comments: true
 ---
 ## Content Provider
 - 앱과 앱 저장소 사이에서 데이터 접근을 쉽게 하도록 관리해주는 클래스.

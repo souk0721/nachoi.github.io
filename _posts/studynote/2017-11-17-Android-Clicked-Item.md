@@ -4,6 +4,7 @@ title:  "[Android] Clicked Item 클릭 처리"
 author: Yena Choi
 categories: studynote
 tags: [android]
+comments: true
 ---
 
 ## Clicked Item

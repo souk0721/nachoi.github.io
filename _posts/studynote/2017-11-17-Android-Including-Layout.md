@@ -4,6 +4,7 @@ title:  "[Android] Including Layout 레이아웃 포함하기"
 author: Yena Choi
 categories: studynote
 tags: [android, layout]
+comments: true
 ---
 
 ## Including Layout

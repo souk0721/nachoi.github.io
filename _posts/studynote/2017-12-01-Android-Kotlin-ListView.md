@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] 코틀린 ListView 리스트뷰"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, view]
+comments: true
 ---
 ListView가 안드로이드 공부 하면서 특히 어려운 부분인 것 같다. 예제 따라하기만 하다보니 머리가 아파서, 직접 예제를 만들고 한 단계씩 정리해보았다.
 

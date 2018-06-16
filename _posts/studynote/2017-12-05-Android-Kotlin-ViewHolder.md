@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] 코틀린 ViewHolder 뷰홀더"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, view]
+comments: true
 ---
 
 ## ViewHolder의 필요성

@@ -4,6 +4,7 @@ title:  "[Android] ConstraintLayout 레이아웃"
 author: Yena Choi
 categories: studynote
 tags: [android, layout]
+comments: true
 ---
 
 언제부턴가 Android Studio에서 ConstraintLayout 를 강력하게 밀고 있는 듯하다. New project를 만들면 기본적으로 생성되는 "Hello World!" 텍스트가 있는 액티비티도 ConstraintLayout으로 생성된다.

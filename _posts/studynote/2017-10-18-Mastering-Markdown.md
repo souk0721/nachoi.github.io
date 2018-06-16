@@ -5,6 +5,7 @@ date:   2017-10-18
 author: Yena Choi
 categories: studynote
 tags: [github, markdown]
+comments: true
 ---
 
 

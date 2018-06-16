@@ -4,6 +4,7 @@ title:  "[Android][Kotlin] 안드로이드 코틀린 Volley"
 author: Yena Choi
 categories: studynote
 tags: [android, kotlin, network]
+comments: true
 ---
 
 ## Volley

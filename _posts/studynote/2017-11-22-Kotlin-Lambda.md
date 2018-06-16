@@ -4,6 +4,7 @@ title:  "[Kotlin] Lambda 코틀린 람다"
 author: Yena Choi
 categories: studynote
 tags: [kotlin, lambda]
+comments: true
 ---
 
 
