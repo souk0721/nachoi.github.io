@@ -3,7 +3,7 @@ layout: post
 title:  "[Github] Login Error 깃헙 자동 로그인 실패"
 author: Yena Choi
 categories: studynote
-tags: [github]
+tags: [github, error]
 comments: true
 ---
 
