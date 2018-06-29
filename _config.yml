@@ -7,14 +7,14 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Nachoi Blog
+title: 으리빠 Blog
 subtitle:
-email: 4nachoi@gmail.com
-name: Yena Choi
+email: souk0721@gmail.com
+name: souk0721
 description: >
   A woman who majored in literature but writes codes!
 baseurl: ""
-url: "https://nachoi.github.io"
+url: "https://souk0721.github.io"
 cover: "/assets/header_171028.jpg"
 logo: "/assets/logo_nachoi.png"
 
@@ -37,8 +37,8 @@ jekyll-archives:
 
 
 # Google analytics
-# ga_tracking_id: "UA-109079446-1" (default from theme)
-google_analytics: "UA-109079446-1"
+
+google_analytics: "UA-120843504-1"
 
 # Category descriptions (for archive pages)
 descriptions:
@@ -67,15 +67,15 @@ descriptions:
 social:
   - name: Facebook
     icon: facebook
-    username: Yena Choi
+    username: souk0721
     url:
     desc: Friend me on Facebook
     share: true
 
   - name: GitHub
     icon: github
-    username: Yena Choi
-    url: https://github.com/nachoi
+    username: souk0721
+    url: https://github.com/souk0721
     desc: Fork me on GitHub
     share: true
 
