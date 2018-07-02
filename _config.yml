@@ -12,11 +12,11 @@ subtitle:
 email: souk0721@gmail.com
 name: souk0721
 description: >
-  A woman who majored in literature but writes codes!
+  noul father
 baseurl: ""
 url: "https://souk0721.github.io"
 cover: "/assets/header_171028.jpg"
-logo: "/assets/logo_nachoi.png"
+logo: "/assets/logo_top.png"
 
 # Build settings
 markdown: kramdown
@@ -43,11 +43,11 @@ google_analytics: "UA-120843504-1"
 # Category descriptions (for archive pages)
 descriptions:
   - cat: posts
-    desc: "성실도 다이어리 - 성공한 것, 실패한 것, 도달한 결론을 기록하는 공간"
+    desc: "끄적임 공간"
 
   - cat: studynote
-    desc: "허투루 공부하지 않도록 기록하는 곳.
-오류 지적이나 제안 환영합니다."
+    desc: "메모는 기억보다 위대하다.
+함께 아는 것을 공유했으면 합니다."
 
 # Social icons and sharing options
 #

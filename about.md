@@ -6,12 +6,8 @@ permalink: /about/
 
 <!-- <img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile"> -->
 
-### About Nachoi
+### About
 
-최예나 혹은 나최.
-
-문예창작을 전공하였으나 개발 언어에 관심을 더 가지게 됐습니다.
-
-안드로이드와 코틀린 공부를 하고 있습니다.
-
-아마 무언가 만들면 이곳에 올릴 예정입니다.
+한 아이의 아버지이며, IT에서 깊이보다는 넓은 지식에
+관심을 가지고 있습니다.
+프로젝트에서 사용했던 코드 등을 공유 하고 필요한 분들이 가져다가 사용하실 수 있으면 좋겠습니다.
