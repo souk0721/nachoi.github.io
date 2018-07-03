@@ -25,7 +25,7 @@ comments: true
 인쇄 할 때 그냥 바꿔서 사용하면 상관 없지만, 기업의 사용자들 대부분은 애기들 이기 때문에 기본 프린터로 설정 되지 않으면 거의 `클라우드 PC`에 잡힌 기본 프린터로 인쇄를 날리게 되더라구요.
 
 ### How?
-- [파워쉘 환경 만들기 링크]({% post_url jekyll/2018-07-02-PowerShell-print-02 %})
+- [파워쉘 환경 만들기 링크]({% post_url studynote/2018-07-02-PowerShell-print-02 %})
 
 ### Code?
 예를 프린터명이 `Sindoh N610_410 MF4000 Series PCL6`일 경우에 대하여 코드를 작성하겠습니다.

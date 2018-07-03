@@ -1,4 +1,4 @@
-gems:
+plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-paginate
