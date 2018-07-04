@@ -49,15 +49,7 @@ PrinterSetting
 
 ### Tip?
  - 간혹 보안문제로 파워쉘이 실행이 않될 때가 있습니다. 
- 그럴경우 아래의 명령줄에서 `c:\pcldrv\test.ps1`를 수정해서 편리하게 `배치파일`로 만들어 사용하시면 문제 없이 관리자 모드로 실행 될 것입니다.
- - 창 모드
- ```
- PowerShell -Command "& {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Unrestricted -File ""c:\pcldrv\test.ps1""' -Verb RunAs}";
- ```
- - 백 그라운드 모드
- ```
- PowerShell -Command "& {Start-Process PowerShell -windowstyle hidden -ArgumentList '-NoProfile -ExecutionPolicy Unrestricted -File ""c:\pcldrv\test.ps1""' -Verb RunAs}";
- ```
+ 그럴 경우 [`보안문제 해결`]({% post_url  studynote/2018-07-04-Tip-PowerShell-01 %})참고
 
 
 
