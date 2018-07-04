@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[Tip] PowerShell 보안 문제 해결"
-date:   2018-07-03
+title:  "[PowerShell] 보안 문제 해결"
+date:   2018-07-04
 author: souk0721
 categories: studynote
 tags: [tip,powershell]

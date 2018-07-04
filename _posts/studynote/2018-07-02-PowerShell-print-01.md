@@ -38,6 +38,7 @@ $Printers =  Get-WmiObject -Class Win32_Printer -ComputerName .
 
      if($PrinterName -like "Sindoh N610_410 MF4000 Series PCL6" ){
        Write-Host 'Print Find' -fore red
+       #해당 프린터를 기본 프린터로 설정해준다.
        $val.SetDefaultPrinter()
        
      }
