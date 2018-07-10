@@ -11,7 +11,9 @@ comments: true
 
 # 필요 개념
   - [`Docker 개념`]({% post_url  studynote/2018-07-10-basic-docker-01 %})
-  - `리눅스` : OS 중하나 검색 해서 찾아보시는게 나으실 듯합니다.
+  - `리눅스` : OS 중하나 검색 해서 찾아보시는게 나으실 듯합니다. [`linode에서 ubuntu 호스팅하기`]({% post_url  studynote/2018-07-10-basic-ubuntu-01 %})
+  - `putty` : 리눅스 SSH 접속 프로그램  [`링크`]({% post_url  studynote/2018-07-10-basic-putty-01 %})
+  
 
 ### 설치환경
 - OS : Ubuntu : 16.04 LTS
