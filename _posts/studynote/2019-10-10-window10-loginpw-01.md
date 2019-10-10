@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Windows10] 윈도우 로그임 / 잠금화면 패스워드 설정"
+title:  "[Windows10] 윈도우 로그인 / 잠금화면 패스워드 설정"
 date:   2019-10-10
 author: souk0721
 categories: studynote
