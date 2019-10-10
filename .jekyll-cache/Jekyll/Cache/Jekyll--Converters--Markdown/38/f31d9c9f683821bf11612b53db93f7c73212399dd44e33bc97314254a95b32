@@ -1,0 +1,41 @@
+I"<h1 id="필요-개념">필요 개념</h1>
+<ul>
+  <li><a href="/studynote/2018/07/10/basic-docker-01.html"><code class="highlighter-rouge">Docker 개념</code></a></li>
+  <li><code class="highlighter-rouge">리눅스</code> : OS 중하나 검색 해서 찾아보시는게 나으실 듯합니다. <a href="/studynote/2018/07/10/basic-ubuntu-01.html"><code class="highlighter-rouge">linode에서 ubuntu 호스팅하기</code></a></li>
+  <li><code class="highlighter-rouge">putty</code> : 리눅스 SSH 접속 프로그램  <a href="/studynote/2018/07/10/basic-putty-01.html"><code class="highlighter-rouge">링크</code></a></li>
+</ul>
+
+<h3 id="설치환경">설치환경</h3>
+<ul>
+  <li>OS : Ubuntu : 16.04 LTS</li>
+</ul>
+
+<h3 id="설치">설치</h3>
+<ol>
+  <li>Docker 설치
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSL https://get.docker.com/ | sudo sh
+</code></pre></div>    </div>
+  </li>
+  <li>Docker 버젼확인
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker version
+</code></pre></div>    </div>
+    <p><strong>18-07-10기준 : 18.05.0-ce</strong></p>
+  </li>
+</ol>
+
+<p>참조 1. <a href="https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html">https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html</a></p>
+
+<!-- ### How?
+1. 작업 등록
+ - `시작`->`실행`->`compmgmt.msc`엔터 
+ - `시스템 도구`->`작업 스케줄러`에서 마우스 오른쪽 버튼 ->`작업 만들기`
+ - 일반 탭s
+ ![job01](/assets/post-img-18-07/job-01.JPG)
+ - 트리거 탭
+ ![job02](/assets/post-img-18-07/job-02.JPG)
+ - 조건 탭
+ ![job03](/assets/post-img-18-07/job-03.JPG)
+ - 실행 (마우스 오른쪽 버튼 누루고 실행)
+ ![job04](/assets/post-img-18-07/job-04.JPG)
+ -->
+:ET

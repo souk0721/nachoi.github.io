@@ -1,0 +1,26 @@
+I"�<!-- # 필요 개념
+  - `윈도우 작업 스케줄러` : 윈도우에서 사용자가 임의로 지정한 시간 및 방식에 따라서 자동으로 프로그램 및 스크립트를 사용하도록 해주는 윈도우 시스템 도구   -->
+
+<h3 id="when">When?</h3>
+<p>PowerShell을 실행하면 보안문제라며 실행이 않될 때가 있습니다.
+그 때 참고하시면 됩니다.</p>
+
+<h3 id="how">How?</h3>
+<ul>
+  <li>PowerShell 권한 주기 :</li>
+</ul>
+
+<p><code class="highlighter-rouge">시작</code> -&gt; <code class="highlighter-rouge">실행</code> -&gt; <code class="highlighter-rouge">CMD(관리자모드)</code> -&gt; <code class="highlighter-rouge">powershell 엔터</code> -&gt; <code class="highlighter-rouge">Set-ExecutionPolicy RemoteSigned 엔터</code></p>
+<ul>
+  <li>배치파일로 실행하기</li>
+</ul>
+
+<p>아래의 명령줄에서 <code class="highlighter-rouge">c:\pcldrv\test.ps1</code>를 수정해서 편리하게 <a href="/studynote/2018/07/02/basic-01.html"><code class="highlighter-rouge">배치파일</code></a>로 만들어 사용하시면 문제 없이 관리자 모드로 실행 될 것입니다.<br /><br />
+창 모드</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> PowerShell -Command "&amp; {Start-Process PowerShell -ArgumentList '-NoProfile -ExecutionPolicy Unrestricted -File ""c:\pcldrv\test.ps1""' -Verb RunAs}";
+</code></pre></div></div>
+<p>백 그라운드 모드</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> PowerShell -Command "&amp; {Start-Process PowerShell -windowstyle hidden -ArgumentList '-NoProfile -ExecutionPolicy Unrestricted -File ""c:\pcldrv\test.ps1""' -Verb RunAs}";
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,68 @@
+I"1	<h1 id="개념">개념</h1>
+<ul>
+  <li><code class="highlighter-rouge">MQTT</code> Message Queuing Telemetry Transport</li>
+  <li>Publish/Subscribe (Pub/Sub)(발행 과 구독) 경량 메시징 프로토콜</li>
+  <li>IoT를 위해 낮은 전력, 낮은 대역폭 환경에서 사용할수 있습니다.</li>
+</ul>
+
+<h1 id="특징">특징</h1>
+<ul>
+  <li>메시지를 발행(Pub)하고, 관심 있는 주제를 구독(Sub)을 기본 원칙으로 합니다.</li>
+  <li>Pub(발행),Sub(구독)은 Broker에 대한 클라이언트로 작동합니다.</li>
+  <li>Pub(발행)은 토픽을 발행하기 위한 목적</li>
+  <li>Sub(구독)은 토픽을 구독하기 위한 목적</li>
+  <li>MQTT는 발행인과 구독자가 메시지를 주고 받을 수 있도록 다리를 놔주는 역할만을 한다.</li>
+</ul>
+
+<h2 id="mosquitto-mqtt-broker">Mosquitto MQTT broker</h2>
+<ul>
+  <li>오픈소스</li>
+  <li>여러 MQTT broker 중 하나 <a href="https://github.com/mqtt/mqtt.github.io/wiki/server-support"><code class="highlighter-rouge">다른 broker</code></a></li>
+</ul>
+
+<!-- ### 설치환경
+- OS : Ubuntu : 16.04 LTS
+- Docker : 18.05.0-ce
+  
+### 설치
+- Ubuntu 서버 및 Docker가 설치 된 것을 전제하에 아래의 순서대로 커맨드 창에 기입 하시면 MQTT broker가 Docker 컨테이너 형태로 서비스 됩니다.
+
+1. Docker Mosquitto 이미지 다운 
+```
+sudo docker pull ansi/mosquitto
+```
+2. Mosquitto 컨테이너 생성
+```
+sudo docker run -p 1883:1883 --name mosquitto -d ansi/mosquitto
+```
+
+### 테스트
+- `Python`으로 테스트를 진행 하겠습니다. -->
+
+<h3 id="참조">참조</h3>
+<ul>
+  <li>참조 1. <a href="https://www.joinc.co.kr/w/man/12/MQTT/Tutorial">https://www.joinc.co.kr/w/man/12/MQTT/Tutorial</a></li>
+</ul>
+
+<!-- ### How?
+1. 작업 등록
+ - `시작`->`실행`->`compmgmt.msc`엔터 
+ - `시스템 도구`->`작업 스케줄러`에서 마우스 오른쪽 버튼 ->`작업 만들기`
+ - 일반 탭s
+
+- 이미지 링크
+ ![job01](/assets/post-img-18-07/job-01.JPG)
+ - 트리거 탭
+ ![job02](/assets/post-img-18-07/job-02.JPG)
+ - 조건 탭
+ ![job03](/assets/post-img-18-07/job-03.JPG)
+ - 실행 (마우스 오른쪽 버튼 누루고 실행)
+ ![job04](/assets/post-img-18-07/job-04.JPG)
+
+
+- 참조 1. [https://hub.docker.com/r/ansi/mosquitto/](https://hub.docker.com/r/ansi/mosquitto/)
+
+
+
+ -->
+:ET

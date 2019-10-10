@@ -1,0 +1,32 @@
+I"8<h1 id="필요-개념">필요 개념</h1>
+<ul>
+  <li><code class="highlighter-rouge">putty</code> : 윈도우 플랫폼에서 <code class="highlighter-rouge">SSH</code>와<code class="highlighter-rouge">Telnet</code>의 실행을 위한 무료 도구입니다.</li>
+  <li>다운로드 : <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">Putty</a></li>
+</ul>
+
+<h1 id="설치-및-접속">설치 및 접속</h1>
+<ul>
+  <li>설치는 이렇다할 어려움이 없으므로 패스 하겠습니다.</li>
+  <li>실행 후 아래와 같이 셋팅 후 접속하시면 됩니다.
+ <img src="/assets/post-img-18-07/putty-01.JPG" alt="putty01" /></li>
+</ul>
+
+<!-- ### How?
+1. 작업 등록
+ - `시작`->`실행`->`compmgmt.msc`엔터 
+ - `시스템 도구`->`작업 스케줄러`에서 마우스 오른쪽 버튼 ->`작업 만들기`
+ - 일반 탭s
+ ![job01](/assets/post-img-18-07/job-01.JPG)
+ - 트리거 탭
+ ![job02](/assets/post-img-18-07/job-02.JPG)
+ - 조건 탭
+ ![job03](/assets/post-img-18-07/job-03.JPG)
+ - 실행 (마우스 오른쪽 버튼 누루고 실행)
+ ![job04](/assets/post-img-18-07/job-04.JPG)
+
+링크
+ [`배치파일`](/studynote/2018/07/02/basic-01.html)로 
+ [https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html)
+
+ -->
+:ET

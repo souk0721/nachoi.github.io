@@ -1,0 +1,43 @@
+I"�<h1 id="필요-개념">필요 개념</h1>
+<ul>
+  <li><code class="highlighter-rouge">Powershell</code> : <del>자동화(Automation)을 위해 많이 사용되는, Windows 운영체제의 API를 사용가능한, 마이크로소프트의 확장 가능한 윈도 파워셸(Windows PowerShell)은 마이크로소프트가 개발한 확장 가능한 명령줄 인터페이스(CLI) 셸 및 스크립트를 지원하는 명령어 인터프리터이다.</del>
+  <code class="highlighter-rouge">[요약]</code>윈도우에서 명령어 한줄로 쉽게 내가원하는 것을 얻어낼 수 있는 인터프리터</li>
+</ul>
+
+<h3 id="when">When?</h3>
+<p><code class="highlighter-rouge">PowerShell</code>을 사용하기 위해 알아아할 가장 기본적인 사항입니다.</p>
+
+<h3 id="how">How?</h3>
+<ol>
+  <li>파워쉘 파일 만들기
+    <ul>
+      <li>바탕화면에서 빈 공간에 <code class="highlighter-rouge">마우스 오른쪽 버튼 클릭 후 새로 만들기</code> -&gt; <code class="highlighter-rouge">텍스트 문서</code></li>
+      <li>텍스트 문서 파일 확장자 <code class="highlighter-rouge">.ps1</code>으로 변환</li>
+    </ul>
+  </li>
+  <li>파워쉘 편집
+    <ul>
+      <li>변환된 파일 마우스 오른쪽 버튼 -&gt; 편집
+ <img src="/assets/post-img-18-07/powshell-print-01.jpg" alt="powshell01" /></li>
+    </ul>
+  </li>
+  <li>파워쉘 스크립트 작성
+ <img src="/assets/post-img-18-07/powshell-print-02.jpg" alt="powshell02" />
+  <strong>보안오류라고 스크립트 실행이 않될 떄</strong><br />
+ 시작 -&gt; 실행 -&gt; CMD(관리자모드실행) -&gt; powershell 엔터 -&gt; Set-ExecutionPolicy RemoteSigned</li>
+  <li>파워쉘 스크립트 실행
+    <ul>
+      <li>텍스트 창에 코드를 삽입후 단축키 <code class="highlighter-rouge">F5</code> 누루면 실행 됩니다.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>위의 1 ~ 4번 과정은 다른 파워쉘 스크립트 과정에서도 필요하니 꼭 숙지 하시길 바랍니다.</strong></p>
+
+<h3 id="tip">Tip?</h3>
+<ul>
+  <li>간혹 보안문제로 파워쉘이 실행이 않될 때가 있습니다. 
+ 그럴 경우 <a href="/studynote/2018/07/04/Tip-PowerShell-01.html"><code class="highlighter-rouge">보안문제 해결</code></a>참고</li>
+</ul>
+
+:ET

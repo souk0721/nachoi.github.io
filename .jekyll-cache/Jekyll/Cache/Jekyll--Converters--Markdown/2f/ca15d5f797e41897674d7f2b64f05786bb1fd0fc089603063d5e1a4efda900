@@ -1,0 +1,6 @@
+I"g<h1 id="필요-개념">필요 개념</h1>
+<ul>
+  <li><code class="highlighter-rouge">Powershell</code> : <del>자동화(Automation)을 위해 많이 사용되는, Windows 운영체제의 API를 사용가능한, 마이크로소프트의 확장 가능한 윈도 파워셸(Windows PowerShell)은 마이크로소프트가 개발한 확장 가능한 명령줄 인터페이스(CLI) 셸 및 스크립트를 지원하는 명령어 인터프리터이다.</del>
+  <code class="highlighter-rouge">[요약]</code>윈도우에서 명령어 한줄로 쉽게 내가원하는 것을 얻어낼 수 있는 인터프리터</li>
+</ul>
+:ET

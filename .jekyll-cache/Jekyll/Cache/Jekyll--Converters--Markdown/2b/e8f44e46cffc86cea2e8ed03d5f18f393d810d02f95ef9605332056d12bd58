@@ -1,0 +1,8 @@
+I"z<h1 id="필요-개념">필요 개념</h1>
+<ul>
+  <li><a href="/studynote/2018/07/10/basic-docker-01.html"><code class="highlighter-rouge">Docker 개념</code></a></li>
+  <li><code class="highlighter-rouge">리눅스</code> : OS 중하나 검색 해서 찾아보시는게 나으실 듯합니다. <a href="/studynote/2018/07/10/basic-ubuntu-01.html"><code class="highlighter-rouge">linode에서 ubuntu 호스팅하기</code></a></li>
+  <li><code class="highlighter-rouge">putty</code> : 리눅스 SSH 접속 프로그램  <a href="/studynote/2018/07/10/basic-putty-01.html"><code class="highlighter-rouge">링크</code></a></li>
+</ul>
+
+:ET

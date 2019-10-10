@@ -1,0 +1,7 @@
+I";<h1 id="개념">개념</h1>
+<ul>
+  <li><code class="highlighter-rouge">MQTT</code> Message Queuing Telemetry Transport</li>
+  <li>Publish/Subscribe (Pub/Sub)(발행 과 구독) 경량 메시징 프로토콜</li>
+  <li>IoT를 위해 낮은 전력, 낮은 대역폭 환경에서 사용할수 있습니다.</li>
+</ul>
+:ET

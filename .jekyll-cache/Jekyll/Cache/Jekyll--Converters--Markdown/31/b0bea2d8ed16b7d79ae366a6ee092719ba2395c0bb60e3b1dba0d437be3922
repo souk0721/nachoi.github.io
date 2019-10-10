@@ -1,0 +1,6 @@
+I"}<h1 id="필요-개념">필요 개념</h1>
+<ul>
+  <li><code class="highlighter-rouge">putty</code> : 윈도우 플랫폼에서 <code class="highlighter-rouge">SSH</code>와<code class="highlighter-rouge">Telnet</code>의 실행을 위한 무료 도구입니다.</li>
+  <li>다운로드 : <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">Putty</a></li>
+</ul>
+:ET

@@ -1,0 +1,54 @@
+I"#<h1 id="사전-준비">사전 준비</h1>
+<ul>
+  <li><a href="/studynote/2018/07/11/basic-mqtt-01.html"><code class="highlighter-rouge">MQTT 개념</code></a></li>
+  <li><a href="/studynote/2018/07/10/basic-ubuntu-01.html"><code class="highlighter-rouge">Linode Ubuntu 호스팅</code></a></li>
+  <li><a href="/studynote/2018/07/10/basic-docker-01.html"><code class="highlighter-rouge">Docker 개념</code></a></li>
+  <li><a href="/studynote/2018/07/10/basic-docker-02.html"><code class="highlighter-rouge">Docker 설치</code></a></li>
+</ul>
+
+<h3 id="설치환경">설치환경</h3>
+<ul>
+  <li>OS : Ubuntu : 16.04 LTS</li>
+  <li>Docker : 18.05.0-ce</li>
+</ul>
+
+<h3 id="설치">설치</h3>
+<ul>
+  <li>Ubuntu 서버 및 Docker가 설치 된 것을 전제하에 아래의 순서대로 커맨드 창에 기입 하시면 MQTT broker가 Docker 컨테이너 형태로 서비스 됩니다.</li>
+</ul>
+
+<ol>
+  <li>Docker Mosquitto 이미지 다운
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker pull ansi/mosquitto
+</code></pre></div>    </div>
+  </li>
+  <li>Mosquitto 컨테이너 생성
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo docker run -p 1883:1883 --name mosquitto -d ansi/mosquitto
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="테스트">테스트</h3>
+<ul>
+  <li><a href="/studynote/2018/07/11/mqtt-python-test-01.html">Python 테스트</a></li>
+</ul>
+
+<h3 id="참조">참조</h3>
+<ul>
+  <li>참조 1. <a href="https://hub.docker.com/r/ansi/mosquitto/">https://hub.docker.com/r/ansi/mosquitto/</a></li>
+</ul>
+
+<!-- ### How?
+1. 작업 등록
+ - `시작`->`실행`->`compmgmt.msc`엔터 
+ - `시스템 도구`->`작업 스케줄러`에서 마우스 오른쪽 버튼 ->`작업 만들기`
+ - 일반 탭s
+ ![job01](/assets/post-img-18-07/job-01.JPG)
+ - 트리거 탭
+ ![job02](/assets/post-img-18-07/job-02.JPG)
+ - 조건 탭
+ ![job03](/assets/post-img-18-07/job-03.JPG)
+ - 실행 (마우스 오른쪽 버튼 누루고 실행)
+ ![job04](/assets/post-img-18-07/job-04.JPG)
+ -->
+:ET
